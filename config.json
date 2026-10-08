@@ -1,6 +1,8 @@
 {
-  "watch_brands": ["Marukyu Koyamaen", "Yamamasa Koyamaen"],
-
+  "watch_brands": [
+    "Marukyu Koyamaen",
+    "Yamamasa Koyamaen"
+  ],
   "notify": {
     "back_in_stock": true,
     "sold_out": true,
@@ -13,15 +15,25 @@
     "group_subscriptions": true,
     "allow_private_chats": true
   },
-
   "sites": [
     {
       "name": "TeaLife (SG)",
       "adapter": "bigcommerce",
       "currency": "SGD",
-      "collections": ["https://japanesetea.sg/matcha/"],
-      "link_must_contain": ["marukyu", "yamamasa"],
-      "exclude_keywords": ["hojicha", "houjicha", "gift set", "whisk", "bowl"]
+      "collections": [
+        "https://japanesetea.sg/matcha/matcha-wholesale/",
+        "https://japanesetea.sg/matcha/standard/"
+      ],
+      "exclude_keywords": [
+        "by-ippodo",
+        "by-tealife",
+        "hojicha",
+        "houjicha",
+        "gift-set",
+        "gift set",
+        "whisk",
+        "bowl"
+      ]
     },
     {
       "name": "Sazen Tea (Kyoto)",
@@ -42,30 +54,33 @@
       "currency": "JPY",
       "brand": "Marukyu Koyamaen",
       "official_for": "Marukyu Koyamaen",
-      "collections": ["https://www.marukyu-koyamaen.co.jp/english/shop/products/catalog/matcha"],
-      "exclude_keywords": ["mix", "soda", "sweetened"]
+      "collections": [
+        "https://www.marukyu-koyamaen.co.jp/english/shop/products/catalog/matcha/principal"
+      ],
+      "exclude_keywords": [
+        "mix",
+        "soda",
+        "sweetened"
+      ]
     },
     {
       "name": "Matcha Miyako (Kyoto)",
       "adapter": "shopify",
       "currency": "USD",
       "brand": "Marukyu Koyamaen",
-      "collections": ["https://matchamiyako.com/collections/matcha"],
+      "collections": [
+        "https://matchamiyako.com/collections/matcha"
+      ],
       "products": [
         "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
         "https://matchamiyako.com/products/isuzu-100-gr-matcha",
         "https://matchamiyako.com/products/kinrin-40g-matcha",
         "https://matchamiyako.com/products/wako-40gr-matcha-teapor"
       ],
-      "exclude_keywords": ["matcha set", "szett"]
-    },
-    {
-      "name": "Houkouen / MatchaJP (Fukuoka)",
-      "adapter": "shopify",
-      "currency": "USD",
-      "brand_default": "Yamamasa Koyamaen",
-      "collections": ["https://www.matchajp.net/collections/koyamaen-matcha-powder"],
-      "exclude_keywords": ["hojicha", "houjicha", "sweets", "cookie"]
+      "exclude_keywords": [
+        "matcha set",
+        "szett"
+      ]
     }
   ]
 }

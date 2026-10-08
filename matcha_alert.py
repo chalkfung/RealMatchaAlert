@@ -70,7 +70,7 @@ def scan_site(site: dict, brands: dict, watch_brands: list):
                 continue
             it["site"] = site.get("name", urllib.parse.urlparse(url).netloc)
             it["brand"] = detect_brand(it, site, brands)
-            it["currency"] = site.get("currency", "USD")
+            it["currency"] = it.get("currency") or site.get("currency", "USD")
             it["watched"] = kind == "product"
             it["official"] = bool(site.get("official_for"))
             it.pop("brand_hint", None)
@@ -78,6 +78,7 @@ def scan_site(site: dict, brands: dict, watch_brands: list):
                 continue
             items.append(it)
         time.sleep(REQUEST_DELAY)
+    errors.extend(site.pop("_errors", []))
     return items, errors
 
 
@@ -437,7 +438,7 @@ def main(argv=None):
         send_telegram("👋 This chat is now subscribed to <b>Matcha Alert</b>. You'll get a message here when "
                       "stock changes. Remove the bot (or send /stop) to unsubscribe.\n\n" + summary, joined, state)
 
-    # Alert about persistent errors once, not every 15 minutes
+    # Alert about persistent errors once, not on every scan
     err_sig = "|".join(sorted(e.split(" -> ")[0] for e in errors))
     if errors and err_sig != state.get("error_sig") and notify_cfg.get("errors", True):
         send_telegram("⚠️ <b>Matcha Alert</b> couldn't read:\n" + "\n".join(html.escape(e) for e in errors),

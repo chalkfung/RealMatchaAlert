@@ -1,6 +1,6 @@
 # Matcha Alert
 
-Checks matcha stock on online stores every 15 minutes and messages you on Telegram when something changes:
+Checks matcha stock on online stores every hour and messages you on Telegram when something changes:
 
 - 🟢 **Back in stock**: an item that was sold out can be bought again
 - 🔴 **Sold out**: an item just sold out
@@ -14,7 +14,7 @@ Messages are grouped by shop, then by brand, and each price is shown next to the
   🟢 Back in stock: Kinrin Matcha Powder · 40g Can · S$54.80 (≈¥6,302) · list ¥5,720 · +10%
 ```
 
-It's a small Python script with no AI in the loop, so each scan costs nothing. It only messages you when something changes (plus one summary on the very first run), so you won't get pinged every 15 minutes.
+It's a small Python script with no AI in the loop, so each scan costs nothing. It only messages you when something changes (plus one summary on the very first run), so you won't get pinged every hour.
 
 ## Files
 
@@ -26,7 +26,7 @@ It's a small Python script with no AI in the loop, so each scan costs nothing. I
 | `list_prices.json` | Manufacturer list prices (Yamamasa). Marukyu's are read live from its official shop. |
 | `config.json` | The stores and products to watch. Edit this to add more. |
 | `state.json` | Created automatically. Remembers the last stock status and which chats are subscribed (by ID only, no names). |
-| `.github/workflows/scan.yml` | Runs the scan every 15 minutes on GitHub for free. |
+| `.github/workflows/scan.yml` | Runs the scan every hour on GitHub for free. |
 | `run_local.sh` | Optional: run it from your own computer with cron instead. |
 
 ---
@@ -44,7 +44,7 @@ It's a small Python script with no AI in the loop, so each scan costs nothing. I
 
 There are two ways, and you can use both.
 
-**Groups and people subscribe themselves (no chat ID needed).** Any Telegram group that adds the bot is subscribed automatically, and so is anyone who opens the bot and sends `/start`. Within 15 minutes (at the next scan) the group gets a welcome message with the current stock list, then an alert whenever stock changes.
+**Groups and people subscribe themselves (no chat ID needed).** Any Telegram group that adds the bot is subscribed automatically, and so is anyone who opens the bot and sends `/start`. Within an hour (at the next scan) the group gets a welcome message with the current stock list, then an alert whenever stock changes.
 - To add the bot to a group: open the group → tap its name → **Add members** → search your bot's username → Add.
 - To unsubscribe: remove the bot from the group, or send `/stop`.
 - `/status` in a subscribed chat sends the full stock list at the next scan.
@@ -58,7 +58,7 @@ Do this before the first scan runs: once the scanner is running it reads (and cl
 
 **Who can add your bot?** Anyone who knows its username can add it to their group and get alerts. That costs you nothing, but if you'd rather keep it to your own groups, add the bot to them first, then send BotFather `/setjoingroups`, pick your bot, and choose **Disable**. Groups already added keep working. To turn self-subscribing off completely, set `"group_subscriptions": false` in `config.json`.
 
-## Step 3: Put it on GitHub so it runs every 15 minutes
+## Step 3: Put it on GitHub so it runs every hour
 
 1. Create a GitHub account if you don't have one, then create a **new repository** (Private is fine), e.g. `matcha-alert`.
 2. Upload all the files from this folder to it, including the hidden `.github` folder. (On the repo page: **Add file → Upload files**, then drag the folder contents in. If the `.github` folder doesn't upload, create the file manually: **Add file → Create new file**, name it `.github/workflows/scan.yml`, and paste the contents.)
@@ -68,12 +68,12 @@ Do this before the first scan runs: once the scanner is running it reads (and cl
 4. Allow the workflow to save its memory file: **Settings → Actions → General → Workflow permissions →** choose **Read and write permissions** → **Save**.
 5. Do a first run by hand: go to the **Actions** tab → **Matcha stock scan** → **Run workflow**. Within a minute or so you should get a stock summary on Telegram (in your own chat, plus any group you've already added the bot to). 🎉
 
-From then on it runs every 15 minutes by itself.
+From then on it runs every hour by itself.
 
 Good to know about GitHub's scheduler:
 - Runs can start **a few minutes late** (sometimes 10+ minutes when GitHub is busy). Fine for restocks, but not to-the-second.
 - In a **public** repo, GitHub pauses scheduled runs after 60 days with no repository activity. The bot commits `state.json` whenever stock changes, which normally keeps it active, but if alerts ever stop, check the Actions tab and press "Enable workflow".
-- **Make the repo public.** A full scan of all five shops takes 1–3 minutes (Marukyu's shop alone has about 50 product pages), which at every 15 minutes is far more than the 2,000 free minutes a month GitHub gives private repos. Public repos get unlimited minutes, and your secrets stay hidden either way. (`state.json` only holds stock data and numeric chat IDs, no names.)
+- **Public repo recommended.** A full scan of all four shops takes a minute or two, which hourly comes to roughly 750–1,500 of the 2,000 free minutes a month GitHub gives private repos, so a private repo works but is tight. Public repos get unlimited minutes, and your secrets stay hidden either way. (`state.json` only holds stock data and numeric chat IDs, no names.)
 
 To get a full stock list on demand: **Actions → Matcha stock scan → Run workflow**, tick **Send a full stock summary**.
 
@@ -101,12 +101,12 @@ Use this if you'd rather not use GitHub. Your computer has to be on for it to sc
 4. Schedule it: run `crontab -e` and add this line (fix the path):
 
    ```
-   */15 * * * * /Users/amber/matcha-alert/run_local.sh
+   7 * * * * /Users/amber/matcha-alert/run_local.sh
    ```
 
    Output goes to `scan.log` in the same folder.
 
-On Windows, use Task Scheduler to run `python matcha_alert.py` in this folder every 15 minutes, with the two variables set as user environment variables.
+On Windows, use Task Scheduler to run `python matcha_alert.py` in this folder every hour, with the two variables set as user environment variables.
 
 ---
 
@@ -114,11 +114,10 @@ On Windows, use Task Scheduler to run `python matcha_alert.py` in this folder ev
 
 | Shop | How it's read | Brands | Prices in |
 |---|---|---|---|
-| TeaLife (SG) | BigCommerce: the matcha category, then each Marukyu/Yamamasa product, size by size | Marukyu, Yamamasa | SGD |
+| TeaLife (SG) | BigCommerce: the Matcha Wholesale and Standard categories, then each product in them, size by size | Marukyu, Yamamasa | SGD |
 | Sazen Tea (Kyoto) | Each product page listed in `config.json` | Marukyu, Yamamasa | USD (price not always readable, see below) |
-| Marukyu Koyamaen (official) | Every product in the official matcha catalogue | Marukyu | JPY. These are also the **list prices** used for comparison |
+| Marukyu Koyamaen (official) | Principal matcha only (official catalogue) | Marukyu | JPY. These are also the **list prices** used for comparison |
 | Matcha Miyako (Kyoto) | Shopify: the matcha collection plus your 4 products | Marukyu (sold unbranded) | USD |
-| Houkouen / MatchaJP | Shopify: the Koyamaen matcha collection | Yamamasa | USD |
 
 Only Marukyu Koyamaen and Yamamasa Koyamaen products are tracked (`watch_brands` in `config.json`). Add a brand name there to track more, or empty the list to track everything.
 
@@ -190,8 +189,8 @@ Test any change with `python3 matcha_alert.py --dry-run` before relying on it. I
 
 ## Troubleshooting
 
-- **Group didn't get the welcome message:** wait for the next scan (up to 15 minutes, or press Run workflow). If it still doesn't come, remove and re-add the bot.
+- **Group didn't get the welcome message:** wait for the next scan (up to an hour, or press Run workflow). If it still doesn't come, remove and re-add the bot.
 - **No message at all:** run `python3 matcha_alert.py --test-telegram`. A `chat not found` error means you haven't pressed Start in the bot chat, or the chat ID is wrong.
 - **`Unauthorized`:** the token is wrong or was revoked.
 - **No alerts for a while:** that's normal. It only messages when stock changes. Use "Run workflow" with summary ticked to see current stock.
-- **"couldn't read" alert:** the store was down or blocked the request. It keeps trying every 15 minutes and won't send false "sold out" alerts in the meantime.
+- **"couldn't read" alert:** the store was down or blocked the request. It keeps trying every hour and won't send false "sold out" alerts in the meantime.

@@ -224,7 +224,7 @@ def woocommerce_catalog(url, site):
         if _excluded(label or link, site):
             continue
         time.sleep(REQUEST_DELAY)
-        out.extend(woocommerce_product(link, site))
+        _collect(out, woocommerce_product, link, site)
     return out
 
 
@@ -261,15 +261,17 @@ def bigcommerce_product(url, site):
         brand = strip_tags(bm.group(1))
     pid = re.search(r'<input[^>]+name="product_id"[^>]+value="(\d+)"', page) or \
         re.search(r'<input[^>]+value="(\d+)"[^>]+name="product_id"', page)
+    # The shop may show another currency depending on the visitor's country; use what the page says
+    meta_cur = re.search(r'<meta[^>]+property="product:price:currency"[^>]+content="([A-Z]{3})"', page)
     meta_price = re.search(r'<meta[^>]+property="product:price:amount"[^>]+content="([\d.,]+)"', page)
     page_price = _num(meta_price.group(1)) if meta_price else None
     page_text = html_to_text(page).lower()
     page_out = any(w in page_text for w in ("out of stock", "sold out")) and "add to cart" not in page_text
 
     opts = _bc_options(page)
+    items = []
     if pid and len(opts) == 1:
         attr, values = next(iter(opts.items()))
-        items = []
         for val, label in values:
             body = urllib.parse.urlencode({"action": "add", "product_id": pid.group(1),
                                            f"attribute[{attr}]": val, "qty[]": "1"}).encode()
@@ -284,9 +286,12 @@ def bigcommerce_product(url, site):
             except Exception:
                 p, avail = None, not page_out  # endpoint not usable: fall back to page-level status
             items.append(_item(f"{url}#{attr}-{val}", name, url, avail, _num(p), label, brand))
-        if items:
-            return items
-    return [_item(url, name, url, not page_out, page_price, "", brand)]
+    if not items:
+        items = [_item(url, name, url, not page_out, page_price, "", brand)]
+    if meta_cur:
+        for it in items:
+            it["currency"] = meta_cur.group(1)
+    return items
 
 
 def bigcommerce_category(url, site):
@@ -303,7 +308,7 @@ def bigcommerce_category(url, site):
         if _excluded(link, site) or not _link_allowed(link, site):
             continue
         time.sleep(REQUEST_DELAY)
-        out.extend(bigcommerce_product(link, site))
+        _collect(out, bigcommerce_product, link, site)
     return out
 
 
@@ -349,7 +354,7 @@ def sazen_category(url, site):
         if _excluded(link, site) or not _link_allowed(link, site):
             continue
         time.sleep(REQUEST_DELAY)
-        out.extend(sazen_product(link, site))
+        _collect(out, sazen_product, link, site)
     return out
 
 
@@ -391,6 +396,14 @@ def html_product(url, site):
 def _excluded(text, site):
     low = text.lower()
     return any(w.lower() in low for w in site.get("exclude_keywords", []))
+
+
+def _collect(out, fn, link, site):
+    """Read one product of a category; a broken product page doesn't sink the rest."""
+    try:
+        out.extend(fn(link, site))
+    except Exception as e:
+        site.setdefault("_errors", []).append(f"{site.get('name', '?')}: {link} -> {e}")
 
 
 def _link_allowed(link, site):
