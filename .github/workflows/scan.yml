@@ -2,7 +2,7 @@ name: Matcha stock scan
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 minutes (GitHub may run a few minutes late)
+   - cron: "7 * * * *" 
   workflow_dispatch:
     inputs:
       summary:
