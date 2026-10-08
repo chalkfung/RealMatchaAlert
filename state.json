@@ -1,0 +1,249 @@
+{
+  "error_sig": "",
+  "items": {
+    "https://matchamiyako.com/products/alacsony-koffeintartalmu-matcha-teapor-40g#42893365117021": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/alacsony-koffeintartalmu-matcha-teapor-40g#42893365117021",
+      "name": "Low caffeine Matcha 40g powder",
+      "price": "37.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/alacsony-koffeintartalmu-matcha-teapor-40g",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741",
+      "name": "Aoarashi 100g matcha powder (bag)",
+      "price": "39.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
+      "watched": true
+    },
+    "https://matchamiyako.com/products/aoarashi-40g#40019312377949": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/aoarashi-40g#40019312377949",
+      "name": "Aoarashi 40g matcha powder",
+      "price": "18.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/aoarashi-40g",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor#40514941911133": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor#40514941911133",
+      "name": "Gabaron 100g matcha powder",
+      "price": "81.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/gabaron-40gr-matcha-teapor#40514985951325": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/gabaron-40gr-matcha-teapor#40514985951325",
+      "name": "Gabaron 40g matcha powder",
+      "price": "34.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/gabaron-40gr-matcha-teapor",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/hoko-40g-matcha#43810199830621": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/hoko-40g-matcha#43810199830621",
+      "name": "Hoko 40g matcha powder",
+      "price": "63.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/hoko-40g-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789",
+      "name": "Isuzu 100g matcha powder (bag)",
+      "price": "47.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/isuzu-100-gr-matcha",
+      "watched": true
+    },
+    "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117",
+      "name": "Isuzu 40g matcha powder",
+      "price": "22.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/isuzu-40-gr-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/kinrin-20g-matcha#43893161263197": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/kinrin-20g-matcha#43893161263197",
+      "name": "Kinrin 20g matcha powder",
+      "price": "26.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/kinrin-20g-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/kinrin-40g-matcha#43893297184861": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/kinrin-40g-matcha#43893297184861",
+      "name": "Kinrin 40g matcha powder",
+      "price": "50.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
+      "watched": true
+    },
+    "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha#43810194194525": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha#43810194194525",
+      "name": "Kokonoe Mukashi 40g matcha powder",
+      "price": "63.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/matcha-au-lait#43820538298461": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/matcha-au-lait#43820538298461",
+      "name": "Matcha Au Lait powder 200g",
+      "price": "15.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/matcha-au-lait",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/matcha-latte#39982300627037": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/matcha-latte#39982300627037",
+      "name": "Matcha Latte powder 200g",
+      "price": "24.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/matcha-latte",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/premium-matcha-szett#39982284308573": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/premium-matcha-szett#39982284308573",
+      "name": "Premium Matcha Set – 3 types of Matcha! ",
+      "price": "71.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/premium-matcha-szett",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/rindo-200g-matcha-powder#40451970629725": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/rindo-200g-matcha-powder#40451970629725",
+      "name": "Rindo 200g matcha powder for cooking",
+      "price": "34.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/rindo-200g-matcha-powder",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/rindo-matcha-teapor-suteshez-100gr#39982298890333": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/rindo-matcha-teapor-suteshez-100gr#39982298890333",
+      "name": "Rindo 100g matcha powder for cooking",
+      "price": "17.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/rindo-matcha-teapor-suteshez-100gr",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor#41053641408605": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor#41053641408605",
+      "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
+      "price": "66.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/shinobu-no-mukashi-40g-matcha#43810192293981": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/shinobu-no-mukashi-40g-matcha#43810192293981",
+      "name": "Shinobu no Mukashi 40g matcha powder",
+      "price": "55.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/shinobu-no-mukashi-40g-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/shinobu-no-shiro-40g-matcha#43810175582301": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/shinobu-no-shiro-40g-matcha#43810175582301",
+      "name": "Shinobu no Shiro 40g matcha powder",
+      "price": "36.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/shinobu-no-shiro-40g-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/ume-no-shiro-40g-matcha#43809303887965": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/ume-no-shiro-40g-matcha#43809303887965",
+      "name": "Ume no Shiro 40g matcha powder",
+      "price": "15.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/ume-no-shiro-40g-matcha",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357",
+      "name": "Wakatake 200g matcha powder for cooking",
+      "price": "59.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/wakatake-200g-matcha-powder",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637",
+      "name": "Wakatake 100g matcha powder for cooking",
+      "price": "29.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/wako#39947160092765": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/wako#39947160092765",
+      "name": "Wako 20g matcha powder",
+      "price": "21.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/wako",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/wako-100g#40019312935005": {
+      "available": false,
+      "key": "https://matchamiyako.com/products/wako-100g#40019312935005",
+      "name": "Wako 100g matcha powder",
+      "price": "94.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/wako-100g",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/wako-40gr-matcha-teapor#40477021962333": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/wako-40gr-matcha-teapor#40477021962333",
+      "name": "Wako 40g matcha powder",
+      "price": "40.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/wako-40gr-matcha-teapor",
+      "watched": true
+    },
+    "https://matchamiyako.com/products/yugen#39982243446877": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/yugen#39982243446877",
+      "name": "Yugen 100g matcha powder",
+      "price": "76.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/yugen",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/yugen-40g#40019312541789": {
+      "available": true,
+      "key": "https://matchamiyako.com/products/yugen-40g#40019312541789",
+      "name": "Yugen 40g matcha powder",
+      "price": "33.00",
+      "site": "Matcha Miyako",
+      "url": "https://matchamiyako.com/products/yugen-40g",
+      "watched": false
+    }
+  },
+  "updated_at": "2026-10-08T13:59:10+00:00"
+}
