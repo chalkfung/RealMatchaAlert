@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Matcha Alert: watch product stock on online stores and send Telegram alerts.
+"""Matcha Alert: watch matcha stock on online shops and send Telegram alerts.
 
 Pure Python standard library. No AI or paid API is involved in a scan.
 
@@ -8,11 +8,18 @@ Usage:
     python matcha_alert.py --dry-run       # scan once, print results, send nothing
     python matcha_alert.py --summary       # also send a full stock summary
     python matcha_alert.py --test-telegram # send a test message and exit
+    python matcha_alert.py --only "TeaLife" --dry-run   # test one shop
 
 Environment variables:
     TELEGRAM_BOT_TOKEN   token from @BotFather
     TELEGRAM_CHAT_ID     optional: your own chat id(s), comma-separated.
                          Groups that add the bot subscribe automatically.
+
+Files:
+    config.json        shops and products to watch
+    list_prices.json   manufacturer list prices (Marukyu is also read live
+                       from its official shop each scan)
+    state.json         written by the script: last stock seen, subscribers
 """
 from __future__ import annotations
 
@@ -20,7 +27,6 @@ import argparse
 import html
 import json
 import os
-import re
 import sys
 import time
 import urllib.error
@@ -29,192 +35,54 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from adapters import ADAPTERS, REQUEST_DELAY  # noqa: E402
+from pricing import build_reference, detect_brand, fx_to_jpy, match_list_price, price_note  # noqa: E402
+
 HERE = Path(__file__).resolve().parent
 DEFAULT_CONFIG = HERE / "config.json"
+DEFAULT_PRICES = HERE / "list_prices.json"
 DEFAULT_STATE = HERE / "state.json"
-
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 MatchaAlert/1.0"
-)
-
-
-# --------------------------------------------------------------------------
-# HTTP
-# --------------------------------------------------------------------------
-
-def http_get(url: str, timeout: int = 20, retries: int = 2) -> str:
-    last_err: Exception | None = None
-    for attempt in range(retries + 1):
-        req = urllib.request.Request(
-            url,
-            headers={"User-Agent": USER_AGENT, "Accept": "application/json,text/html;q=0.9,*/*;q=0.8"},
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                charset = resp.headers.get_content_charset() or "utf-8"
-                return resp.read().decode(charset, errors="replace")
-        except urllib.error.HTTPError as e:
-            last_err = e
-            if e.code in (404, 410):
-                break
-            # 429 = rate limited, back off a bit longer
-            time.sleep(5 * (attempt + 1) if e.code == 429 else 2 * (attempt + 1))
-        except (urllib.error.URLError, TimeoutError, OSError) as e:
-            last_err = e
-            time.sleep(2 * (attempt + 1))
-    raise RuntimeError(f"GET {url} failed: {last_err}")
-
-
-def get_json(url: str):
-    return json.loads(http_get(url))
-
-
-# --------------------------------------------------------------------------
-# Item model: every adapter returns a list of dicts like
-#   {"key": "<stable id>", "name": str, "url": str, "available": bool, "price": str}
-# One dict per variant (e.g. size), so a product with 2 sizes gives 2 items.
-# --------------------------------------------------------------------------
-
-def _item(key, name, url, available, price=""):
-    return {"key": key, "name": name, "url": url, "available": bool(available), "price": price}
-
-
-# --------------------------------------------------------------------------
-# Shopify adapter (works for any Shopify store)
-# --------------------------------------------------------------------------
-
-def _shopify_split(url: str):
-    p = urllib.parse.urlparse(url)
-    base = f"{p.scheme}://{p.netloc}"
-    path = p.path.rstrip("/")
-    return base, path
-
-
-def _shopify_variant_items(base, product, price_in_cents: bool):
-    handle = product["handle"]
-    title = product["title"]
-    variants = product.get("variants") or []
-    items = []
-    for v in variants:
-        vtitle = v.get("title") or ""
-        name = title if vtitle in ("", "Default Title") or len(variants) == 1 else f"{title} ({vtitle})"
-        price = v.get("price")
-        if price is not None and price_in_cents:
-            price = f"{int(price) / 100:.2f}"
-        items.append(_item(
-            key=f"{base}/products/{handle}#{v.get('id')}",
-            name=name,
-            url=f"{base}/products/{handle}" + (f"?variant={v['id']}" if len(variants) > 1 else ""),
-            available=v.get("available", False),
-            price=str(price or ""),
-        ))
-    return items
-
-
-def shopify_product(url: str):
-    """Product page URL -> its variants via the public <url>.js endpoint."""
-    base, path = _shopify_split(url)
-    m = re.search(r"/products/([^/?#]+)", path)
-    if not m:
-        raise ValueError(f"Not a Shopify product URL: {url}")
-    handle = m.group(1)
-    try:
-        product = get_json(f"{base}/products/{handle}.js")  # prices in cents
-        return _shopify_variant_items(base, product, price_in_cents=True)
-    except Exception:
-        # Fallback: .json endpoint (prices as strings, "available" sometimes missing)
-        product = get_json(f"{base}/products/{handle}.json")["product"]
-        return _shopify_variant_items(base, product, price_in_cents=False)
-
-
-def shopify_collection(url: str):
-    """Collection URL -> every product variant in it via products.json (paged)."""
-    base, path = _shopify_split(url)
-    m = re.search(r"/collections/([^/?#]+)", path)
-    if not m:
-        raise ValueError(f"Not a Shopify collection URL: {url}")
-    handle = m.group(1)
-    items = []
-    for page in range(1, 21):
-        data = get_json(f"{base}/collections/{handle}/products.json?limit=250&page={page}")
-        products = data.get("products") or []
-        if not products:
-            break
-        for p in products:
-            items.extend(_shopify_variant_items(base, p, price_in_cents=False))
-        if len(products) < 250:
-            break
-    return items
-
-
-# --------------------------------------------------------------------------
-# Generic HTML adapter (for non-Shopify stores)
-# Looks at schema.org JSON-LD "availability" first, then text markers you
-# can set per site in config.json ("in_stock_text" / "out_of_stock_text").
-# --------------------------------------------------------------------------
-
-def html_product(url: str, site: dict):
-    page = http_get(url)
-    name = url
-    t = re.search(r"<title[^>]*>(.*?)</title>", page, re.S | re.I)
-    if t:
-        name = html.unescape(t.group(1)).strip()
-
-    available = None
-    for block in re.findall(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', page, re.S | re.I):
-        avail = re.findall(r'"availability"\s*:\s*"([^"]+)"', block)
-        if avail:
-            available = any(a.rstrip("/").endswith(("InStock", "LimitedAvailability", "PreOrder")) for a in avail)
-            n = re.search(r'"name"\s*:\s*"([^"]+)"', block)
-            if n:
-                name = html.unescape(n.group(1))
-            break
-
-    if available is None:
-        low = page.lower()
-        out_markers = [s.lower() for s in site.get("out_of_stock_text", ["sold out", "out of stock", "currently unavailable"])]
-        in_markers = [s.lower() for s in site.get("in_stock_text", ["add to cart", "add to bag", "buy now"])]
-        if any(s in low for s in out_markers):
-            available = False
-        elif any(s in low for s in in_markers):
-            available = True
-        else:
-            raise RuntimeError(f"Could not tell stock status for {url}; set in_stock_text/out_of_stock_text in config")
-    return [_item(key=url, name=name, url=url, available=available)]
 
 
 # --------------------------------------------------------------------------
 # Scanning
 # --------------------------------------------------------------------------
 
-def scan_site(site: dict):
-    adapter = site.get("adapter", "shopify")
+def scan_site(site: dict, brands: dict, watch_brands: list):
+    adapter = ADAPTERS.get(site.get("adapter", "shopify"))
     items, errors = [], []
+    if adapter is None:
+        return items, [f"{site.get('name', '?')}: unknown adapter '{site.get('adapter')}'"]
     targets = [("collection", u) for u in site.get("collections", [])] + \
               [("product", u) for u in site.get("products", [])]
     for kind, url in targets:
         try:
-            if adapter == "shopify":
-                got = shopify_collection(url) if kind == "collection" else shopify_product(url)
-            elif adapter == "html":
-                if kind == "collection":
-                    raise ValueError("html adapter supports product URLs only")
-                got = html_product(url, site)
-            else:
-                raise ValueError(f"Unknown adapter '{adapter}'")
-            for it in got:
-                it["site"] = site.get("name", urllib.parse.urlparse(url).netloc)
-                it["watched"] = kind == "product"
-            items.extend(got)
+            fn = adapter.get(kind)
+            if fn is None:
+                raise ValueError(f"{site.get('adapter')} adapter supports product links only")
+            got = fn(url, site)
         except Exception as e:  # keep going; report at the end
             errors.append(f"{site.get('name', '?')}: {url} -> {e}")
-        time.sleep(site.get("delay_seconds", 1))
+            continue
+        for it in got:
+            if any(w.lower() in (it["name"] + " " + it["variant"]).lower() for w in site.get("exclude_keywords", [])):
+                continue
+            it["site"] = site.get("name", urllib.parse.urlparse(url).netloc)
+            it["brand"] = detect_brand(it, site, brands)
+            it["currency"] = site.get("currency", "USD")
+            it["watched"] = kind == "product"
+            it["official"] = bool(site.get("official_for"))
+            it.pop("brand_hint", None)
+            if watch_brands and it["brand"] not in watch_brands:
+                continue
+            items.append(it)
+        time.sleep(REQUEST_DELAY)
     return items, errors
 
 
 def merge_items(items):
-    """Same variant can appear from both a collection and a product link."""
+    """The same variant can come from both a collection and a product link."""
     merged = {}
     for it in items:
         prev = merged.get(it["key"])
@@ -245,40 +113,55 @@ def diff(prev_state: dict, current: dict, cfg_notify: dict):
     return events
 
 
-def fmt_item(it):
-    price = f" · {it['price']}" if it.get("price") else ""
-    return f'<a href="{html.escape(it["url"])}">{html.escape(it["name"])}</a>{html.escape(price)}'
+# --------------------------------------------------------------------------
+# Messages: grouped by shop, then by brand
+# --------------------------------------------------------------------------
+
+LABELS = {"restock": "🟢 Back in stock", "soldout": "🔴 Sold out", "new": "🆕 New", "removed": "⚪ Removed"}
+EVENT_ORDER = {"restock": 0, "new": 1, "soldout": 2, "removed": 3}
 
 
-def build_alert(events):
-    labels = {
-        "restock": "🟢 BACK IN STOCK",
-        "soldout": "🔴 Sold out",
-        "new": "🆕 New listing",
-        "removed": "⚪ Removed from store",
-    }
-    lines = ["🍵 <b>Matcha Alert</b>"]
-    # Restocks first, they matter most
-    order = {"restock": 0, "new": 1, "soldout": 2, "removed": 3}
-    for kind, it in sorted(events, key=lambda e: order[e[0]]):
-        extra = " (in stock)" if kind == "new" and it["available"] else (" (sold out)" if kind == "new" else "")
-        lines.append(f"{labels[kind]}{extra}: {fmt_item(it)}")
-    return "\n".join(lines)
+def item_line(it, rates):
+    name = it["name"] + (f" · {it['variant']}" if it.get("variant") else "")
+    line = f'<a href="{html.escape(it["url"])}">{html.escape(name)}</a>'
+    note = price_note(it, rates)
+    return line + (f" · {html.escape(note)}" if note else "")
 
 
-def build_summary(current: dict, errors):
-    lines = ["🍵 <b>Matcha Alert: stock summary</b>"]
+def grouped(rows, site_order, brand_order):
+    """rows: [(item, text)] -> lines grouped by site then brand."""
     by_site = {}
-    for it in current.values():
-        by_site.setdefault(it["site"], []).append(it)
-    for site, its in by_site.items():
-        lines.append(f"\n<b>{html.escape(site)}</b>")
-        for it in sorted(its, key=lambda x: (not x["watched"], not x["available"], x["name"])):
-            star = "⭐ " if it["watched"] else ""
-            mark = "✅" if it["available"] else "❌"
-            lines.append(f"{mark} {star}{fmt_item(it)}")
+    for it, text in rows:
+        by_site.setdefault(it["site"], {}).setdefault(it.get("brand") or "Other", []).append(text)
+    lines = []
+    s_rank = {s: i for i, s in enumerate(site_order)}
+    b_rank = {b: i for i, b in enumerate(brand_order)}
+    for site in sorted(by_site, key=lambda s: (s_rank.get(s, 99), s)):
+        lines.append(f"\n🏪 <b>{html.escape(site)}</b>")
+        for brand in sorted(by_site[site], key=lambda b: (b_rank.get(b, 99), b)):
+            lines.append(f"  <i>{html.escape(brand)}</i>")
+            lines.extend(f"  {t}" for t in by_site[site][brand])
+    return lines
+
+
+def build_alert(events, rates, site_order, brand_order):
+    rows = [(it, f"{LABELS[k]}: {item_line(it, rates)}")
+            for k, it in sorted(events, key=lambda e: (EVENT_ORDER[e[0]], e[1]["name"]))]
+    return "\n".join(["🍵 <b>Matcha Alert</b>"] + grouped(rows, site_order, brand_order))
+
+
+def build_summary(current, errors, rates, site_order, brand_order, show_sold_out=True):
+    rows = []
+    for it in sorted(current.values(), key=lambda x: (not x["available"], x["name"], x.get("variant", ""))):
+        if not it["available"] and not show_sold_out:
+            continue
+        mark = "✅" if it["available"] else "❌"
+        rows.append((it, f"{mark} {'⭐ ' if it['watched'] else ''}{item_line(it, rates)}"))
+    lines = ["🍵 <b>Matcha Alert: stock summary</b>",
+             "<i>list = manufacturer's price in Japan incl. tax; % = shop price vs list</i>"]
+    lines += grouped(rows, site_order, brand_order)
     if errors:
-        lines.append("\n⚠️ Errors:\n" + "\n".join(html.escape(e) for e in errors))
+        lines.append("\n⚠️ Couldn't read:\n" + "\n".join(html.escape(e) for e in errors))
     return "\n".join(lines)
 
 
@@ -445,23 +328,44 @@ def load_json(path: Path, default):
         return default
 
 
+def save_state(path: Path, state: dict):
+    new_text = json.dumps(state, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    old_text = path.read_text(encoding="utf-8") if path.exists() else ""
+    if new_text != old_text:  # only touch the file on real changes (keeps git history quiet)
+        path.write_text(new_text, encoding="utf-8")
+
+
+STATE_FIELDS = ("site", "brand", "name", "variant", "url", "available", "price", "currency", "watched", "official")
+
+
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="Scan stores for matcha stock and alert via Telegram.")
+    ap = argparse.ArgumentParser(description="Scan shops for matcha stock and alert via Telegram.")
     ap.add_argument("--config", default=str(DEFAULT_CONFIG))
+    ap.add_argument("--prices", default=str(DEFAULT_PRICES))
     ap.add_argument("--state", default=str(DEFAULT_STATE))
     ap.add_argument("--dry-run", action="store_true", help="print results, send nothing, don't save state")
     ap.add_argument("--summary", action="store_true", help="also send a full stock summary")
     ap.add_argument("--test-telegram", action="store_true", help="send a test message and exit")
+    ap.add_argument("--only", help="scan only the shop with this name (for testing; implies --dry-run)")
     args = ap.parse_args(argv)
+    if args.only:
+        args.dry_run = True
 
     cfg = load_json(Path(args.config), None)
     if cfg is None:
         print(f"Config not found: {args.config}", file=sys.stderr)
         return 2
+    prices_cfg = load_json(Path(args.prices), {})
     state_path = Path(args.state)
     state = load_json(state_path, {})
     prev_items = state.get("items", {})
     notify_cfg = cfg.get("notify", {})
+    brands = prices_cfg.get("brands", {})
+    watch_brands = cfg.get("watch_brands", [])
+    sites = [s for s in cfg.get("sites", []) if s.get("enabled", True) is not False
+             and (not args.only or s.get("name", "").lower() == args.only.lower())]
+    site_order = [s.get("name") for s in cfg.get("sites", [])]
+    brand_order = watch_brands or list(brands)
 
     joined = []
     if os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() and not args.dry_run:
@@ -476,45 +380,57 @@ def main(argv=None):
         save_state(state_path, state)
         return 0 if ok else 1
 
+    # Official shops first, so their prices are ready for the comparison
+    sites.sort(key=lambda s: not s.get("official_for"))
     all_items, errors = [], []
-    for site in cfg.get("sites", []):
-        if site.get("enabled", True) is False:
-            continue
-        its, errs = scan_site(site)
+    for site in sites:
+        print(f"Scanning {site.get('name')} ...", flush=True)
+        its, errs = scan_site(site, brands, watch_brands)
         all_items.extend(its)
         errors.extend(errs)
     current = merge_items(all_items)
 
-    # If a whole fetch failed, keep the old entries so we don't fire false
+    # If something failed, keep its old entries so we don't fire false
     # "removed"/"new" alerts when the site comes back.
-    if errors:
+    if errors and not args.only:
         for k, v in prev_items.items():
             current.setdefault(k, {**v, "stale": True})
 
-    only_watched = notify_cfg.get("only_watched_products", False)
-    events = diff(prev_items, current, notify_cfg)
-    if only_watched:
+    # Manufacturer list prices + exchange rates
+    official = {}
+    for it in current.values():
+        if it.get("official") and not it.get("stale"):
+            site = next((s for s in cfg.get("sites", []) if s.get("name") == it["site"]), {})
+            official.setdefault(site.get("official_for", it["brand"]), []).append(it)
+    ref = build_reference(prices_cfg, official, state)
+    rates = fx_to_jpy(state)
+    aliases = prices_cfg.get("aliases", {})
+    for it in current.values():
+        it["list_price"] = None if it.get("official") else match_list_price(it, ref, aliases)
+
+    events = diff(prev_items, current, notify_cfg) if not args.only else []
+    if notify_cfg.get("only_watched_products", False):
         events = [e for e in events if e[1].get("watched")]
 
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    print(f"[{now}] scanned {len(current)} items, {len(events)} change(s), {len(errors)} error(s)")
-    for it in sorted(current.values(), key=lambda x: (x["site"], x["name"])):
-        print(f"  {'IN ' if it['available'] else 'OUT'} {'*' if it['watched'] else ' '} {it['name']}  {it['url']}")
+    print(f"[{now}] {len(current)} items, {len(events)} change(s), {len(errors)} error(s)")
+    for it in sorted(current.values(), key=lambda x: (x["site"], x.get("brand") or "", x["name"], x.get("variant", ""))):
+        print(f"  {'IN ' if it['available'] else 'OUT'} {'*' if it['watched'] else ' '} [{it['site']} / {it.get('brand')}] "
+              f"{it['name']} {it.get('variant', '')}  {price_note(it, rates)}")
     for e in errors:
         print("  ERROR", e, file=sys.stderr)
 
     if args.dry_run:
         if events:
-            print("\nWould send:\n" + build_alert(events))
+            print("\nWould send:\n" + build_alert(events, rates, site_order, brand_order))
         return 0
 
     first_run = not prev_items
-    # Recipients of the change alert: everyone except chats that just joined
-    # (they get the full summary below instead).
     recipients = all_recipients(state)
     if events:
-        send_telegram(build_alert(events), [c for c in recipients if c not in joined], state)
-    summary = build_summary(current, errors)
+        send_telegram(build_alert(events, rates, site_order, brand_order), [c for c in recipients if c not in joined], state)
+    summary = build_summary(current, errors, rates, site_order, brand_order,
+                            notify_cfg.get("summary_show_sold_out", True))
     if args.summary or (first_run and notify_cfg.get("summary_on_first_run", True)):
         send_telegram(summary, all_recipients(state), state)
     elif joined:
@@ -530,17 +446,10 @@ def main(argv=None):
     state.update({
         "updated_at": now if (events or first_run or err_sig != state.get("error_sig")) else state.get("updated_at", now),
         "error_sig": err_sig,
-        "items": {k: {kk: vv for kk, vv in v.items() if kk != "stale"} for k, v in current.items()},
+        "items": {k: {f: v.get(f) for f in STATE_FIELDS} for k, v in current.items()},
     })
     save_state(state_path, state)
     return 0
-
-
-def save_state(path: Path, state: dict):
-    new_text = json.dumps(state, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
-    old_text = path.read_text(encoding="utf-8") if path.exists() else ""
-    if new_text != old_text:  # only touch the file on real changes (keeps git history quiet)
-        path.write_text(new_text, encoding="utf-8")
 
 
 if __name__ == "__main__":

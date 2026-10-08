@@ -1,0 +1,150 @@
+{
+  "_readme": "Manufacturer list prices in JPY, used for the 'list ¥... / +x%' comparison. Marukyu prices are read live from its official shop on every scan, so its products list can stay empty. Yamamasa prices come from its English catalogue PDF (https://www.yamamasa-koyamaen.co.jp/assets/pdf/product/catalog_en.pdf), which lists prices WITHOUT tax; tax_rate is added so they compare fairly with shop prices. Fill a price as a number, e.g. \"30g can\": 4000. null = unknown, no comparison shown.",
+  "aliases": {
+    "tyajyu": "chajyu",
+    "wakou": "wako",
+    "tyaju": "chajyu",
+    "chaju": "chajyu",
+    "sikibu": "shikibu",
+    "tennohzan": "tennouzan",
+    "tennozan": "tennouzan"
+  },
+  "brands": {
+    "Marukyu Koyamaen": {
+      "keywords": [
+        "marukyu"
+      ],
+      "tax": "included",
+      "source": "https://www.marukyu-koyamaen.co.jp/english/shop/products/catalog/matcha (read live)",
+      "products": []
+    },
+    "Yamamasa Koyamaen": {
+      "keywords": [
+        "yamamasa"
+      ],
+      "tax": "excluded",
+      "tax_rate": 0.08,
+      "source": "https://www.yamamasa-koyamaen.co.jp/assets/pdf/product/catalog_en.pdf (Signature Matcha table, desired retail prices excl. tax, catalogue dated 2026-08)",
+      "products": [
+        {
+          "name": "Chajyu-no-mukashi",
+          "prices": {
+            "30g can": 15000,
+            "150g can": 75000,
+            "100g bag": 50000
+          }
+        },
+        {
+          "name": "Kasuga-no-mukashi",
+          "prices": {
+            "30g can": 10000,
+            "150g can": 49500,
+            "100g bag": 33000
+          }
+        },
+        {
+          "name": "Kaguraden",
+          "prices": {
+            "30g can": 7600,
+            "150g can": 37500,
+            "100g bag": 25000
+          }
+        },
+        {
+          "name": "Seiun",
+          "prices": {
+            "30g can": 5100,
+            "150g can": 24000,
+            "300g can": 47600,
+            "100g bag": 16100
+          }
+        },
+        {
+          "name": "Tennouzan",
+          "prices": {
+            "30g can": 4100,
+            "150g can": 19200,
+            "300g can": 38000,
+            "100g bag": 12900,
+            "500g bag": 62900
+          }
+        },
+        {
+          "name": "Senjin-no-mukashi",
+          "prices": {
+            "30g can": 3600,
+            "150g can": 16800,
+            "300g can": 33100,
+            "100g bag": 11200,
+            "500g bag": 54800
+          }
+        },
+        {
+          "name": "Shikibu-no-mukashi",
+          "prices": {
+            "30g can": 3100,
+            "150g can": 14500,
+            "300g can": 28400,
+            "100g bag": 9600,
+            "500g bag": 46900,
+            "1kg bag": 93500
+          }
+        },
+        {
+          "name": "Ogurayama",
+          "prices": {
+            "30g can": 2600,
+            "150g can": 12100,
+            "300g can": 23800,
+            "100g bag": 8000,
+            "500g bag": 39300,
+            "1kg bag": 78300
+          }
+        },
+        {
+          "name": "Yomo-no-kaori",
+          "prices": {
+            "30g can": 2100,
+            "150g can": 9700,
+            "300g can": 19000,
+            "100g bag": 6400,
+            "500g bag": 31300,
+            "1kg bag": 62300
+          }
+        },
+        {
+          "name": "Samidori",
+          "prices": {
+            "30g can": 1600,
+            "150g can": 7300,
+            "300g can": 14200,
+            "100g bag": 4800,
+            "500g bag": 23300,
+            "1kg bag": 46300
+          }
+        },
+        {
+          "name": "Matsukaze",
+          "prices": {
+            "30g can": 1300,
+            "150g can": 5900,
+            "300g can": 11400,
+            "100g bag": 3850,
+            "500g bag": 18600,
+            "1kg bag": 36700
+          }
+        },
+        {
+          "name": "Maki-no-shiro",
+          "prices": {
+            "150g can": 4950,
+            "300g can": 9500,
+            "100g bag": 3150,
+            "500g bag": 15300,
+            "1kg bag": 30000
+          }
+        }
+      ]
+    }
+  }
+}

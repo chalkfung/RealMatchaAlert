@@ -6,6 +6,14 @@ Checks matcha stock on online stores every 15 minutes and messages you on Telegr
 - 🔴 **Sold out**: an item just sold out
 - 🆕 **New listing**: a new product appeared in a watched collection
 
+Messages are grouped by shop, then by brand, and each price is shown next to the manufacturer's own list price in Japan, so you can see the reseller markup at a glance:
+
+```
+🏪 TeaLife (SG)
+  Marukyu Koyamaen
+  🟢 Back in stock: Kinrin Matcha Powder · 40g Can · S$54.80 (≈¥6,302) · list ¥5,720 · +10%
+```
+
 It's a small Python script with no AI in the loop, so each scan costs nothing. It only messages you when something changes (plus one summary on the very first run), so you won't get pinged every 15 minutes.
 
 ## Files
@@ -13,6 +21,9 @@ It's a small Python script with no AI in the loop, so each scan costs nothing. I
 | File | What it is |
 |---|---|
 | `matcha_alert.py` | The scanner. Python 3.9+, standard library only, nothing to install. |
+| `adapters.py` | How each shop is read (Shopify, BigCommerce, Marukyu's shop, Sazen Tea). |
+| `pricing.py` | Brand detection, size matching, list-price comparison, exchange rates. |
+| `list_prices.json` | Manufacturer list prices (Yamamasa). Marukyu's are read live from its official shop. |
 | `config.json` | The stores and products to watch. Edit this to add more. |
 | `state.json` | Created automatically. Remembers the last stock status and which chats are subscribed (by ID only, no names). |
 | `.github/workflows/scan.yml` | Runs the scan every 15 minutes on GitHub for free. |
@@ -62,7 +73,7 @@ From then on it runs every 15 minutes by itself.
 Good to know about GitHub's scheduler:
 - Runs can start **a few minutes late** (sometimes 10+ minutes when GitHub is busy). Fine for restocks, but not to-the-second.
 - In a **public** repo, GitHub pauses scheduled runs after 60 days with no repository activity. The bot commits `state.json` whenever stock changes, which normally keeps it active, but if alerts ever stop, check the Actions tab and press "Enable workflow".
-- Private repos get 2,000 free Actions minutes a month. Each scan takes well under a minute, but GitHub rounds every run up to a full minute, so 15-minute scans use about 2,900 minutes a month. **Make the repo public to avoid that limit** (public repos get unlimited minutes; your secrets stay hidden either way), or change the schedule to `*/30 * * * *` in a private repo.
+- **Make the repo public.** A full scan of all five shops takes 1–3 minutes (Marukyu's shop alone has about 50 product pages), which at every 15 minutes is far more than the 2,000 free minutes a month GitHub gives private repos. Public repos get unlimited minutes, and your secrets stay hidden either way. (`state.json` only holds stock data and numeric chat IDs, no names.)
 
 To get a full stock list on demand: **Actions → Matcha stock scan → Run workflow**, tick **Send a full stock summary**.
 
@@ -99,11 +110,42 @@ On Windows, use Task Scheduler to run `python matcha_alert.py` in this folder ev
 
 ---
 
+## The shops it watches
+
+| Shop | How it's read | Brands | Prices in |
+|---|---|---|---|
+| TeaLife (SG) | BigCommerce: the matcha category, then each Marukyu/Yamamasa product, size by size | Marukyu, Yamamasa | SGD |
+| Sazen Tea (Kyoto) | Each product page listed in `config.json` | Marukyu, Yamamasa | USD (price not always readable, see below) |
+| Marukyu Koyamaen (official) | Every product in the official matcha catalogue | Marukyu | JPY. These are also the **list prices** used for comparison |
+| Matcha Miyako (Kyoto) | Shopify: the matcha collection plus your 4 products | Marukyu (sold unbranded) | USD |
+| Houkouen / MatchaJP | Shopify: the Koyamaen matcha collection | Yamamasa | USD |
+
+Only Marukyu Koyamaen and Yamamasa Koyamaen products are tracked (`watch_brands` in `config.json`). Add a brand name there to track more, or empty the list to track everything.
+
+### Price comparison
+
+Next to each shop price you'll see `list ¥X · +Y%`:
+
+- **list** is the manufacturer's own price in Japan, tax included. For Marukyu it's read live from its official shop on every scan. For Yamamasa it comes from `list_prices.json`, typed in from Yamamasa's catalogue PDF (those prices exclude tax, so 8% is added).
+- **+Y%** is the shop's price converted to yen at today's exchange rate (free open.er-api.com rates, refreshed twice a day) compared with that list price. It doesn't include shipping.
+- No comparison is shown when the size or name can't be matched to a list price, or when the list price is unknown.
+
+To fill in or correct a Yamamasa price, edit `list_prices.json`, e.g. `"30g can": 4000` (in yen, before tax, as printed in the catalogue).
+
+### Known limits
+
+- **Sazen Tea** shows prices with JavaScript, so the scanner may get stock status but no price there. Each Sazen product is tracked as one item even if it comes in several sizes.
+- **Marukyu's shop** shows "out of stock" reliably when every size of a product is gone. If only one size is gone, the scanner relies on a per-size marker in the page that I couldn't confirm from here; check the first summary against the site.
+- **TeaLife** sizes are checked with the same request the page makes when you click a size. If the shop refuses it, the scanner falls back to whole-product stock.
+- If a shop changes its website layout, its products may show up under "couldn't read". Run `python3 matcha_alert.py --only "TeaLife (SG)"` to test one shop.
+
 ## Adding more stores and products
 
 Everything lives in `config.json`. After editing, commit the change (on GitHub, just edit the file in the browser).
 
 **Another product on the same store:** add its link to `products`.
+
+**Another product link:** add it to that shop's `products` list (Sazen: copy the product page URL).
 
 **A new Shopify store** (most small matcha shops are Shopify; if the site has `/products/...` and `/collections/...` links, it probably is): add another block to `sites`:
 
