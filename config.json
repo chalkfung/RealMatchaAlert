@@ -1,0 +1,26 @@
+{
+  "notify": {
+    "back_in_stock": true,
+    "sold_out": true,
+    "new_product": true,
+    "removed": false,
+    "errors": true,
+    "summary_on_first_run": true,
+    "only_watched_products": false
+  },
+  "sites": [
+    {
+      "name": "Matcha Miyako",
+      "adapter": "shopify",
+      "collections": [
+        "https://matchamiyako.com/collections/matcha"
+      ],
+      "products": [
+        "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
+        "https://matchamiyako.com/products/isuzu-100-gr-matcha",
+        "https://matchamiyako.com/products/kinrin-40g-matcha",
+        "https://matchamiyako.com/products/wako-40gr-matcha-teapor"
+      ]
+    }
+  ]
+}
