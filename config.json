@@ -6,7 +6,9 @@
     "removed": false,
     "errors": true,
     "summary_on_first_run": true,
-    "only_watched_products": false
+    "only_watched_products": false,
+    "group_subscriptions": true,
+    "allow_private_chats": true
   },
   "sites": [
     {
