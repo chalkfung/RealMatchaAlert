@@ -574,7 +574,7 @@
       "currency": "USD",
       "name": "Kinrin 40g matcha powder",
       "official": false,
-      "price": 50.0,
+      "price": 51.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
       "variant": "",
@@ -749,7 +749,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/yugen#39982243446877": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Yugen 100g matcha powder",
@@ -845,7 +845,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -857,7 +857,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -869,7 +869,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -881,7 +881,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -1304,34 +1304,6 @@
   "list_prices": {
     "Marukyu Koyamaen": [
       {
-        "core": "unkaku",
-        "grams": 20,
-        "jpy": 3700,
-        "label": "Unkaku 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 40,
-        "jpy": 7120,
-        "label": "Unkaku 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 100,
-        "jpy": 17150,
-        "label": "Unkaku 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 100,
-        "jpy": 16840,
-        "label": "Unkaku 100g bag",
-        "pack": "bag"
-      },
-      {
         "core": "tenju",
         "grams": 20,
         "jpy": 20100,
@@ -1372,6 +1344,34 @@
         "jpy": 24720,
         "label": "Kiwami Choan 40g can",
         "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 20,
+        "jpy": 3700,
+        "label": "Unkaku 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 40,
+        "jpy": 7120,
+        "label": "Unkaku 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 17150,
+        "label": "Unkaku 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 16840,
+        "label": "Unkaku 100g bag",
+        "pack": "bag"
       },
       {
         "core": "wako",
@@ -1577,5 +1577,5 @@
     }
   },
   "tg_offset": 741155491,
-  "updated_at": "2026-10-08T17:22:19+00:00"
+  "updated_at": "2026-10-08T20:40:35+00:00"
 }
