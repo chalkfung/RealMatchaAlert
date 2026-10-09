@@ -773,7 +773,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1111020c1#1111020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Tenju",
@@ -785,7 +785,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1111020c1#1111040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Tenju",
@@ -1305,20 +1305,6 @@
   "list_prices": {
     "Marukyu Koyamaen": [
       {
-        "core": "tenju",
-        "grams": 20,
-        "jpy": 20100,
-        "label": "Tenju 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "tenju",
-        "grams": 40,
-        "jpy": 40120,
-        "label": "Tenju 40g can",
-        "pack": "can"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1393,6 +1379,20 @@
         "grams": 200,
         "jpy": 20700,
         "label": "Wako 200g can",
+        "pack": "can"
+      },
+      {
+        "core": "tenju",
+        "grams": 20,
+        "jpy": 20100,
+        "label": "Tenju 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "tenju",
+        "grams": 40,
+        "jpy": 40120,
+        "label": "Tenju 40g can",
         "pack": "can"
       },
       {
@@ -1578,5 +1578,5 @@
     }
   },
   "tg_offset": 741155491,
-  "updated_at": "2026-10-09T08:08:29+00:00"
+  "updated_at": "2026-10-09T11:08:36+00:00"
 }
