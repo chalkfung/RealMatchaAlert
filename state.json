@@ -208,30 +208,6 @@
       "variant": "500g Bag",
       "watched": false
     },
-    "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/#361-209": {
-      "available": true,
-      "brand": "Marukyu Koyamaen",
-      "currency": "USD",
-      "name": "Chigi No Shiro Ceremonial Grade Uji Matcha Powder 40g, 100g | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
-      "official": false,
-      "price": 40.46,
-      "site": "TeaLife (SG)",
-      "url": "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/",
-      "variant": "40g Can",
-      "watched": false
-    },
-    "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/#361-210": {
-      "available": false,
-      "brand": "Marukyu Koyamaen",
-      "currency": "USD",
-      "name": "Chigi No Shiro Ceremonial Grade Uji Matcha Powder 40g, 100g | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
-      "official": false,
-      "price": 80.29,
-      "site": "TeaLife (SG)",
-      "url": "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/",
-      "variant": "100g Bag",
-      "watched": false
-    },
     "https://japanesetea.sg/prd/hatsu-no-mori-matcha-by-marukyu-koyamaen/#368-225": {
       "available": true,
       "brand": "Marukyu Koyamaen",
@@ -478,7 +454,7 @@
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 38.0,
+      "price": 39.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
