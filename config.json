@@ -10,6 +10,8 @@
     "removed": false,
     "errors": true,
     "summary_on_first_run": true,
+    "daily_summary_time": "07:00",
+    "timezone": "Asia/Singapore",
     "summary_show_sold_out": true,
     "only_watched_products": false,
     "group_subscriptions": true,

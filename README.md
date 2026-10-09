@@ -183,6 +183,8 @@ Test any change with `python3 matcha_alert.py --dry-run` before relying on it. I
 | `removed` | false | Alert when a product disappears from the store |
 | `errors` | true | Alert (once) when a site can't be read |
 | `summary_on_first_run` | true | Send a full list the first time it runs |
+| `daily_summary_time` | "07:00" | Send the full stock list once a day, on the first scan at or after this time. Remove the line to turn it off. |
+| `timezone` | "Asia/Singapore" | Time zone for `daily_summary_time` |
 | `only_watched_products` | false | Only alert about products listed under `products` |
 | `group_subscriptions` | true | Groups that add the bot (and people who send `/start`) get alerts |
 | `allow_private_chats` | true | Let individual people subscribe with `/start`, not just groups |

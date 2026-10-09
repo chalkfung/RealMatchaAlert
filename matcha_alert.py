@@ -336,6 +336,30 @@ def save_state(path: Path, state: dict):
         path.write_text(new_text, encoding="utf-8")
 
 
+def daily_summary_due(notify_cfg: dict, state: dict):
+    """True on the first scan at/after the daily summary time, once per day.
+
+    Returns (due, today); today is None when no daily summary is configured or
+    it's still before the time today. Scans can start late, so "at or after"
+    rather than an exact match.
+    """
+    at = notify_cfg.get("daily_summary_time")
+    if not at:
+        return False, None
+    try:
+        from zoneinfo import ZoneInfo
+        tz = ZoneInfo(notify_cfg.get("timezone", "Asia/Singapore"))
+    except Exception:
+        from datetime import timedelta
+        tz = timezone(timedelta(hours=8))
+    now = datetime.now(tz)
+    hh, mm = (int(x) for x in at.split(":"))
+    if (now.hour, now.minute) < (hh, mm):
+        return False, None
+    today = now.date().isoformat()
+    return state.get("last_daily_summary") != today, today
+
+
 STATE_FIELDS = ("site", "brand", "name", "variant", "url", "available", "price", "currency", "watched", "official")
 
 
@@ -432,8 +456,11 @@ def main(argv=None):
         send_telegram(build_alert(events, rates, site_order, brand_order), [c for c in recipients if c not in joined], state)
     summary = build_summary(current, errors, rates, site_order, brand_order,
                             notify_cfg.get("summary_show_sold_out", True))
-    if args.summary or (first_run and notify_cfg.get("summary_on_first_run", True)):
+    daily_due, today = daily_summary_due(notify_cfg, state)
+    if args.summary or daily_due or (first_run and notify_cfg.get("summary_on_first_run", True)):
         send_telegram(summary, all_recipients(state), state)
+        if today:
+            state["last_daily_summary"] = today
     elif joined:
         send_telegram("👋 This chat is now subscribed to <b>Matcha Alert</b>. You'll get a message here when "
                       "stock changes. Remove the bot (or send /stop) to unsubscribe.\n\n" + summary, joined, state)
