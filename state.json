@@ -641,7 +641,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/shinobu-no-shiro-40g-matcha#43810175582301": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Shinobu no Shiro 40g matcha powder",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-11T09:08:27+00:00"
+  "updated_at": "2026-10-11T12:08:25+00:00"
 }
