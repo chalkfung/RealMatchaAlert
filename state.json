@@ -701,7 +701,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-100g#40019312935005": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wako 100g matcha powder",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-11T08:08:20+00:00"
+  "updated_at": "2026-10-11T09:08:27+00:00"
 }
