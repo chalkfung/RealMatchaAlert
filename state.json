@@ -173,7 +173,7 @@
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
@@ -454,7 +454,7 @@
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 39.0,
+      "price": 38.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-12T01:08:28+00:00"
+  "updated_at": "2026-10-12T05:08:22+00:00"
 }
