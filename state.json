@@ -478,7 +478,7 @@
       "currency": "USD",
       "name": "Gabaron 100g matcha powder",
       "official": false,
-      "price": 81.0,
+      "price": 80.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor",
       "variant": "",
@@ -742,7 +742,7 @@
       "currency": "USD",
       "name": "Yugen 40g matcha powder",
       "official": false,
-      "price": 33.0,
+      "price": 32.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/yugen-40g",
       "variant": "",
@@ -1277,7 +1277,7 @@
       "watched": true
     }
   },
-  "last_daily_summary": "2026-10-12",
+  "last_daily_summary": "2026-10-13",
   "list_prices": {
     "Marukyu Koyamaen": [
       {
