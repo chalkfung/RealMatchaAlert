@@ -622,7 +622,7 @@
       "currency": "USD",
       "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
       "official": false,
-      "price": 65.0,
+      "price": 66.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
       "variant": "",
@@ -665,7 +665,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 200g matcha powder for cooking",
@@ -677,7 +677,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 100g matcha powder for cooking",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-12T20:08:27+00:00"
+  "updated_at": "2026-10-13T02:08:34+00:00"
 }
