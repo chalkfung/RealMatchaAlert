@@ -449,7 +449,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
@@ -629,7 +629,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/shinobu-no-mukashi-40g-matcha#43810192293981": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Shinobu no Mukashi 40g matcha powder",
@@ -677,7 +677,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 100g matcha powder for cooking",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-13T08:08:21+00:00"
+  "updated_at": "2026-10-13T11:08:25+00:00"
 }
