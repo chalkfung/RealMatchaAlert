@@ -1,5 +1,5 @@
 {
-  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 43.1723,
@@ -497,7 +497,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/hoko-40g-matcha#43810199830621": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Hoko 40g matcha powder",
@@ -509,7 +509,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu 100g matcha powder (bag)",
@@ -521,7 +521,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu 40g matcha powder",
@@ -557,7 +557,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha#43810194194525": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Kokonoe Mukashi 40g matcha powder",
@@ -593,7 +593,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/rindo-200g-matcha-powder#40451970629725": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Rindo 200g matcha powder for cooking",
@@ -641,7 +641,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/shinobu-no-shiro-40g-matcha#43810175582301": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Shinobu no Shiro 40g matcha powder",
@@ -665,7 +665,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 200g matcha powder for cooking",
@@ -713,7 +713,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-40gr-matcha-teapor#40477021962333": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wako 40g matcha powder",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-13T15:08:23+00:00"
+  "updated_at": "2026-10-13T16:08:32+00:00"
 }
