@@ -169,7 +169,7 @@
       "ZWG": 5.9497,
       "ZWL": 5.9495
     },
-    "ts": 1791878901
+    "ts": 1791922110
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -713,7 +713,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-40gr-matcha-teapor#40477021962333": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wako 40g matcha powder",
@@ -1253,7 +1253,7 @@
       "watched": true
     },
     "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Tsubokiri Matcha Ceremonial Grade Matcha Marukyu Koyamaen",
@@ -1261,7 +1261,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html",
-      "variant": "40g",
+      "variant": "",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p446-matcha-awaraku.html": {
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-13T18:08:34+00:00"
+  "updated_at": "2026-10-13T20:08:30+00:00"
 }
