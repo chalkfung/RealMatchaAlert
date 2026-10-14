@@ -478,7 +478,7 @@
       "currency": "USD",
       "name": "Gabaron 100g matcha powder",
       "official": false,
-      "price": 81.0,
+      "price": 80.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor",
       "variant": "",
@@ -509,7 +509,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu 100g matcha powder (bag)",
@@ -610,7 +610,7 @@
       "currency": "USD",
       "name": "Rindo 100g matcha powder for cooking",
       "official": false,
-      "price": 17.0,
+      "price": 16.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/rindo-matcha-teapor-suteshez-100gr",
       "variant": "",
@@ -622,7 +622,7 @@
       "currency": "USD",
       "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
       "official": false,
-      "price": 66.0,
+      "price": 65.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
       "variant": "",
@@ -677,7 +677,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 100g matcha powder for cooking",
@@ -742,7 +742,7 @@
       "currency": "USD",
       "name": "Yugen 40g matcha powder",
       "official": false,
-      "price": 33.0,
+      "price": 32.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/yugen-40g",
       "variant": "",
@@ -1133,7 +1133,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#11A1040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Aoarashi",
@@ -1145,7 +1145,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#11A1100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Aoarashi",
@@ -1157,7 +1157,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#1F23100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Aoarashi",
@@ -1169,7 +1169,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#1F23200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Aoarashi",
@@ -1365,34 +1365,6 @@
         "pack": "bag"
       },
       {
-        "core": "aoarashi",
-        "grams": 40,
-        "jpy": 2120,
-        "label": "Aoarashi 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 100,
-        "jpy": 4650,
-        "label": "Aoarashi 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 100,
-        "jpy": 4340,
-        "label": "Aoarashi 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 200,
-        "jpy": 8700,
-        "label": "Aoarashi 200g can",
-        "pack": "can"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1545,6 +1517,34 @@
         "jpy": 10700,
         "label": "Isuzu 200g can",
         "pack": "can"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 40,
+        "jpy": 2120,
+        "label": "Aoarashi 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 100,
+        "jpy": 4650,
+        "label": "Aoarashi 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 100,
+        "jpy": 4340,
+        "label": "Aoarashi 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 200,
+        "jpy": 8700,
+        "label": "Aoarashi 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-14T11:08:28+00:00"
+  "updated_at": "2026-10-14T13:08:25+00:00"
 }
