@@ -665,7 +665,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 200g matcha powder for cooking",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-15T20:08:35+00:00"
+  "updated_at": "2026-10-15T21:08:30+00:00"
 }
