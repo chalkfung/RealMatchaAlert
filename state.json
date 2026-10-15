@@ -550,7 +550,7 @@
       "currency": "USD",
       "name": "Kinrin 40g matcha powder",
       "official": false,
-      "price": 51.0,
+      "price": 50.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
       "variant": "",
@@ -670,7 +670,7 @@
       "currency": "USD",
       "name": "Wakatake 200g matcha powder for cooking",
       "official": false,
-      "price": 60.0,
+      "price": 59.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/wakatake-200g-matcha-powder",
       "variant": "",
@@ -730,7 +730,7 @@
       "currency": "USD",
       "name": "Yugen 100g matcha powder",
       "official": false,
-      "price": 77.0,
+      "price": 76.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/yugen",
       "variant": "",
@@ -1253,7 +1253,7 @@
       "watched": true
     },
     "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Tsubokiri Matcha Ceremonial Grade Matcha Marukyu Koyamaen",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-15T13:08:31+00:00"
+  "updated_at": "2026-10-15T15:08:30+00:00"
 }
