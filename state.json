@@ -1295,34 +1295,6 @@
         "pack": "can"
       },
       {
-        "core": "kinrin",
-        "grams": 20,
-        "jpy": 3000,
-        "label": "Kinrin 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 40,
-        "jpy": 5720,
-        "label": "Kinrin 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13650,
-        "label": "Kinrin 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13340,
-        "label": "Kinrin 100g bag",
-        "pack": "bag"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1426,6 +1398,34 @@
         "jpy": 9120,
         "label": "Eiju 40g can",
         "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 20,
+        "jpy": 3000,
+        "label": "Kinrin 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 40,
+        "jpy": 5720,
+        "label": "Kinrin 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13650,
+        "label": "Kinrin 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13340,
+        "label": "Kinrin 100g bag",
+        "pack": "bag"
       },
       {
         "core": "yugen",
