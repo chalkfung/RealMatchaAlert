@@ -977,7 +977,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -989,7 +989,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1001,7 +1001,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1013,7 +1013,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1025,7 +1025,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1037,7 +1037,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1049,7 +1049,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1061,7 +1061,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1073,7 +1073,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1400,69 +1400,6 @@
         "pack": "bag"
       },
       {
-        "core": "yugen",
-        "grams": 20,
-        "jpy": 2000,
-        "label": "Yugen 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 40,
-        "jpy": 3720,
-        "label": "Yugen 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8650,
-        "label": "Yugen 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8340,
-        "label": "Yugen 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "yugen",
-        "grams": 200,
-        "jpy": 16700,
-        "label": "Yugen 200g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 40,
-        "jpy": 2920,
-        "label": "Chigi no Shiro 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6650,
-        "label": "Chigi no Shiro 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6340,
-        "label": "Chigi no Shiro 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 200,
-        "jpy": 12700,
-        "label": "Chigi no Shiro 200g can",
-        "pack": "can"
-      },
-      {
         "core": "isuzu",
         "grams": 40,
         "jpy": 2520,
@@ -1545,6 +1482,69 @@
         "jpy": 13820,
         "label": "Choan 40g can",
         "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 20,
+        "jpy": 2000,
+        "label": "Yugen 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 40,
+        "jpy": 3720,
+        "label": "Yugen 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8650,
+        "label": "Yugen 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8340,
+        "label": "Yugen 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "yugen",
+        "grams": 200,
+        "jpy": 16700,
+        "label": "Yugen 200g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 40,
+        "jpy": 2920,
+        "label": "Chigi no Shiro 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6650,
+        "label": "Chigi no Shiro 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6340,
+        "label": "Chigi no Shiro 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 200,
+        "jpy": 12700,
+        "label": "Chigi no Shiro 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-16T02:08:27+00:00"
+  "updated_at": "2026-10-16T03:08:25+00:00"
 }
