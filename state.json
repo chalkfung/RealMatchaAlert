@@ -454,7 +454,7 @@
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 38.0,
+      "price": 39.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
@@ -509,7 +509,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu 100g matcha powder (bag)",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-16T17:08:30+00:00"
+  "updated_at": "2026-10-16T18:08:32+00:00"
 }
