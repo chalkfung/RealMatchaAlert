@@ -461,7 +461,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/aoarashi-40g#40019312377949": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi 40g matcha powder",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-17T10:08:23+00:00"
+  "updated_at": "2026-10-17T15:08:28+00:00"
 }
