@@ -593,7 +593,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/rindo-200g-matcha-powder#40451970629725": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Rindo 200g matcha powder for cooking",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-17T22:08:24+00:00"
+  "updated_at": "2026-10-18T02:08:29+00:00"
 }
