@@ -233,7 +233,7 @@
       "watched": false
     },
     "https://japanesetea.sg/prd/isuzu-matcha-100g-by-marukyu-koyamaen/#360-207": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu Matcha Powder by Marukyu Koyamaen",
@@ -677,7 +677,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wakatake 100g matcha powder for cooking",
@@ -1557,5 +1557,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-18T08:08:23+00:00"
+  "updated_at": "2026-10-18T14:08:21+00:00"
 }
