@@ -1,5 +1,5 @@
 {
-  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 42.9978,
@@ -1566,8 +1566,11 @@
     },
     "124818445": {
       "type": "private"
+    },
+    "74121560": {
+      "type": "private"
     }
   },
-  "tg_offset": 741155493,
-  "updated_at": "2026-10-19T08:08:21+00:00"
+  "tg_offset": 741155494,
+  "updated_at": "2026-10-19T09:08:29+00:00"
 }
