@@ -1,5 +1,5 @@
 {
-  "error_sig": "Marukyu Koyamaen (official): https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 42.9978,
@@ -634,7 +634,7 @@
       "currency": "USD",
       "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
       "official": false,
-      "price": 66.0,
+      "price": 65.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
       "variant": "",
@@ -1307,6 +1307,34 @@
         "pack": "can"
       },
       {
+        "core": "unkaku",
+        "grams": 20,
+        "jpy": 3700,
+        "label": "Unkaku 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 40,
+        "jpy": 7120,
+        "label": "Unkaku 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 17150,
+        "label": "Unkaku 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 16840,
+        "label": "Unkaku 100g bag",
+        "pack": "bag"
+      },
+      {
         "core": "wako",
         "grams": 20,
         "jpy": 2400,
@@ -1541,5 +1569,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-19T18:08:29+00:00"
+  "updated_at": "2026-10-19T19:08:34+00:00"
 }
