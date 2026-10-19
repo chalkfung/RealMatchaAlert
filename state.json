@@ -1,5 +1,5 @@
 {
-  "error_sig": "",
+  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
   "fx": {
     "rates": {
       "AED": 42.9978,
@@ -557,7 +557,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/kinrin-40g-matcha#43893297184861": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Kinrin 40g matcha powder",
@@ -725,7 +725,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-40gr-matcha-teapor#40477021962333": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wako 40g matcha powder",
@@ -1569,5 +1569,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-19T04:08:28+00:00"
+  "updated_at": "2026-10-19T05:08:18+00:00"
 }
