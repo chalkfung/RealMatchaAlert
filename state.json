@@ -1,5 +1,5 @@
 {
-  "error_sig": "",
+  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
   "fx": {
     "rates": {
       "AED": 42.9978,
@@ -169,7 +169,7 @@
       "ZWG": 5.9346,
       "ZWL": 5.9347
     },
-    "ts": 1792372107
+    "ts": 1792415308
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -461,19 +461,19 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 39.0,
+      "price": 38.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
       "watched": true
     },
     "https://matchamiyako.com/products/aoarashi-40g#40019312377949": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi 40g matcha powder",
@@ -1566,11 +1566,8 @@
     },
     "124818445": {
       "type": "private"
-    },
-    "74121560": {
-      "type": "private"
     }
   },
-  "tg_offset": 741155496,
-  "updated_at": "2026-10-19T12:08:24+00:00"
+  "tg_offset": 741155497,
+  "updated_at": "2026-10-19T13:08:28+00:00"
 }
