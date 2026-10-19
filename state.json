@@ -461,7 +461,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
@@ -533,7 +533,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu 40g matcha powder",
@@ -737,7 +737,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/yugen#39982243446877": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Yugen 100g matcha powder",
@@ -1571,6 +1571,6 @@
       "type": "private"
     }
   },
-  "tg_offset": 741155494,
-  "updated_at": "2026-10-19T09:08:29+00:00"
+  "tg_offset": 741155496,
+  "updated_at": "2026-10-19T10:08:28+00:00"
 }
