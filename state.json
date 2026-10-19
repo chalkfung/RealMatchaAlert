@@ -173,7 +173,7 @@
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Aoarashi Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
@@ -208,6 +208,30 @@
       "variant": "500g Bag",
       "watched": false
     },
+    "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/#361-209": {
+      "available": true,
+      "brand": "Marukyu Koyamaen",
+      "currency": "USD",
+      "name": "Chigi No Shiro Ceremonial Grade Uji Matcha Powder 40g, 100g | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
+      "official": false,
+      "price": 40.45,
+      "site": "TeaLife (SG)",
+      "url": "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/",
+      "variant": "40g Can",
+      "watched": false
+    },
+    "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/#361-210": {
+      "available": false,
+      "brand": "Marukyu Koyamaen",
+      "currency": "USD",
+      "name": "Chigi No Shiro Ceremonial Grade Uji Matcha Powder 40g, 100g | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
+      "official": false,
+      "price": 80.28,
+      "site": "TeaLife (SG)",
+      "url": "https://japanesetea.sg/prd/chigi-no-shiro-matcha-by-marukyu-koyamaen/",
+      "variant": "100g Bag",
+      "watched": false
+    },
     "https://japanesetea.sg/prd/hatsu-no-mori-matcha-by-marukyu-koyamaen/#368-225": {
       "available": true,
       "brand": "Marukyu Koyamaen",
@@ -233,7 +257,7 @@
       "watched": false
     },
     "https://japanesetea.sg/prd/isuzu-matcha-100g-by-marukyu-koyamaen/#360-207": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu Matcha Powder by Marukyu Koyamaen",
@@ -401,7 +425,7 @@
       "watched": false
     },
     "https://japanesetea.sg/prd/yugen-matcha-by-marukyu-koyamaen/#359-205": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Yugen Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
@@ -1545,5 +1569,5 @@
     }
   },
   "tg_offset": 741155493,
-  "updated_at": "2026-10-18T15:08:25+00:00"
+  "updated_at": "2026-10-19T04:08:28+00:00"
 }
