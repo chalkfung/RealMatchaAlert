@@ -169,7 +169,7 @@
       "ZWG": 5.9508,
       "ZWL": 5.9506
     },
-    "ts": 1792458510
+    "ts": 1792501710
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -881,7 +881,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Kinrin",
@@ -893,7 +893,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Kinrin",
@@ -905,7 +905,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Kinrin",
@@ -917,7 +917,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Kinrin",
@@ -1307,34 +1307,6 @@
         "pack": "can"
       },
       {
-        "core": "kinrin",
-        "grams": 20,
-        "jpy": 3000,
-        "label": "Kinrin 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 40,
-        "jpy": 5720,
-        "label": "Kinrin 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13650,
-        "label": "Kinrin 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13340,
-        "label": "Kinrin 100g bag",
-        "pack": "bag"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1438,6 +1410,34 @@
         "jpy": 9120,
         "label": "Eiju 40g can",
         "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 20,
+        "jpy": 3000,
+        "label": "Kinrin 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 40,
+        "jpy": 5720,
+        "label": "Kinrin 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13650,
+        "label": "Kinrin 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13340,
+        "label": "Kinrin 100g bag",
+        "pack": "bag"
       },
       {
         "core": "yugen",
@@ -1569,5 +1569,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-20T09:08:31+00:00"
+  "updated_at": "2026-10-20T13:08:30+00:00"
 }
