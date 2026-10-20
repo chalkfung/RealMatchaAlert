@@ -466,7 +466,7 @@
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 38.0,
+      "price": 39.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
@@ -533,7 +533,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Isuzu 40g matcha powder",
@@ -725,7 +725,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-40gr-matcha-teapor#40477021962333": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "name": "Wako 40g matcha powder",
@@ -809,7 +809,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Eiju",
@@ -821,7 +821,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Eiju",
@@ -1321,20 +1321,6 @@
         "pack": "can"
       },
       {
-        "core": "eiju",
-        "grams": 20,
-        "jpy": 4700,
-        "label": "Eiju 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "eiju",
-        "grams": 40,
-        "jpy": 9120,
-        "label": "Eiju 40g can",
-        "pack": "can"
-      },
-      {
         "core": "kinrin",
         "grams": 20,
         "jpy": 3000,
@@ -1437,6 +1423,20 @@
         "grams": 200,
         "jpy": 20700,
         "label": "Wako 200g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 20,
+        "jpy": 4700,
+        "label": "Eiju 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 40,
+        "jpy": 9120,
+        "label": "Eiju 40g can",
         "pack": "can"
       },
       {
@@ -1569,5 +1569,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-20T04:08:30+00:00"
+  "updated_at": "2026-10-20T05:08:26+00:00"
 }
