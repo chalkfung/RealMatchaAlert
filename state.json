@@ -833,7 +833,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -845,7 +845,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -857,7 +857,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -869,7 +869,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Unkaku",
@@ -989,7 +989,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1001,7 +1001,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1013,7 +1013,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1025,7 +1025,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1037,7 +1037,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Yugen",
@@ -1293,34 +1293,6 @@
   "list_prices": {
     "Marukyu Koyamaen": [
       {
-        "core": "unkaku",
-        "grams": 20,
-        "jpy": 3700,
-        "label": "Unkaku 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 40,
-        "jpy": 7120,
-        "label": "Unkaku 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 100,
-        "jpy": 17150,
-        "label": "Unkaku 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 100,
-        "jpy": 16840,
-        "label": "Unkaku 100g bag",
-        "pack": "bag"
-      },
-      {
         "core": "eiju",
         "grams": 20,
         "jpy": 4700,
@@ -1363,41 +1335,6 @@
         "pack": "bag"
       },
       {
-        "core": "yugen",
-        "grams": 20,
-        "jpy": 2000,
-        "label": "Yugen 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 40,
-        "jpy": 3720,
-        "label": "Yugen 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8650,
-        "label": "Yugen 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8340,
-        "label": "Yugen 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "yugen",
-        "grams": 200,
-        "jpy": 16700,
-        "label": "Yugen 200g can",
-        "pack": "can"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1410,6 +1347,34 @@
         "jpy": 24720,
         "label": "Kiwami Choan 40g can",
         "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 20,
+        "jpy": 3700,
+        "label": "Unkaku 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 40,
+        "jpy": 7120,
+        "label": "Unkaku 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 17150,
+        "label": "Unkaku 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 16840,
+        "label": "Unkaku 100g bag",
+        "pack": "bag"
       },
       {
         "core": "wako",
@@ -1472,6 +1437,41 @@
         "grams": 40,
         "jpy": 13820,
         "label": "Choan 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 20,
+        "jpy": 2000,
+        "label": "Yugen 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 40,
+        "jpy": 3720,
+        "label": "Yugen 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8650,
+        "label": "Yugen 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8340,
+        "label": "Yugen 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "yugen",
+        "grams": 200,
+        "jpy": 16700,
+        "label": "Yugen 200g can",
         "pack": "can"
       },
       {
@@ -1569,5 +1569,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-21T06:08:43+00:00"
+  "updated_at": "2026-10-21T07:08:44+00:00"
 }
