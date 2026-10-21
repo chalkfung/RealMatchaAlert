@@ -485,7 +485,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -550,7 +550,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -563,7 +563,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -589,13 +589,13 @@
       "watched": false
     },
     "https://matchamiyako.com/products/kinrin-40g-matcha#43893297184861": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Kinrin",
       "name": "Kinrin 40g matcha powder",
       "official": false,
-      "price": 51.0,
+      "price": 50.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
       "variant": "",
@@ -710,7 +710,7 @@
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Tsubokiri",
-      "name": "Tsubokiri matcha powder - limited product!",
+      "name": "Tsubokiri 40g matcha powder (Limited product)",
       "official": false,
       "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
@@ -1688,5 +1688,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-21T13:08:43+00:00"
+  "updated_at": "2026-10-21T14:08:44+00:00"
 }
