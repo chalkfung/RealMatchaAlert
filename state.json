@@ -1672,6 +1672,19 @@
     },
     "124818445": {
       "type": "private"
+    },
+    "219178579": {
+      "follow": [
+        "Marukyu Koyamaen/Wako",
+        "Marukyu Koyamaen/Isuzu"
+      ],
+      "type": "private"
+    },
+    "74121560": {
+      "follow": [
+        "Marukyu Koyamaen/Aoarashi"
+      ],
+      "type": "private"
     }
   },
   "tg_offset": 741155498,
