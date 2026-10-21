@@ -809,7 +809,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Eiju",
@@ -821,7 +821,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Eiju",
@@ -1293,20 +1293,6 @@
   "list_prices": {
     "Marukyu Koyamaen": [
       {
-        "core": "eiju",
-        "grams": 20,
-        "jpy": 4700,
-        "label": "Eiju 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "eiju",
-        "grams": 40,
-        "jpy": 9120,
-        "label": "Eiju 40g can",
-        "pack": "can"
-      },
-      {
         "core": "kinrin",
         "grams": 20,
         "jpy": 3000,
@@ -1440,6 +1426,20 @@
         "pack": "can"
       },
       {
+        "core": "eiju",
+        "grams": 20,
+        "jpy": 4700,
+        "label": "Eiju 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 40,
+        "jpy": 9120,
+        "label": "Eiju 40g can",
+        "pack": "can"
+      },
+      {
         "core": "yugen",
         "grams": 20,
         "jpy": 2000,
@@ -1569,5 +1569,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-21T07:08:44+00:00"
+  "updated_at": "2026-10-21T08:08:44+00:00"
 }
