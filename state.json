@@ -641,7 +641,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/rindo-200g-matcha-powder#40451970629725": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Rindo",
@@ -732,7 +732,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -1688,5 +1688,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-21T14:08:44+00:00"
+  "updated_at": "2026-10-21T15:08:50+00:00"
 }
