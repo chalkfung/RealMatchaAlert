@@ -169,7 +169,7 @@
       "ZWG": 5.9453,
       "ZWL": 5.9454
     },
-    "ts": 1792544921
+    "ts": 1792588123
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -563,7 +563,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -595,7 +595,7 @@
       "item": "Kinrin",
       "name": "Kinrin 40g matcha powder",
       "official": false,
-      "price": 50.0,
+      "price": 51.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
       "variant": "",
@@ -1688,5 +1688,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-21T09:08:44+00:00"
+  "updated_at": "2026-10-21T13:08:43+00:00"
 }
