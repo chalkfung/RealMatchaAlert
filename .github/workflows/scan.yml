@@ -7,6 +7,10 @@ on:
         description: "Send a full stock summary"
         type: boolean
         default: false
+      commands_only:
+        description: "Only answer Telegram commands (no shop scan)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # to save state.json between runs
@@ -31,7 +35,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          if [ "${{ inputs.summary }}" = "true" ]; then
+          if [ "${{ inputs.commands_only }}" = "true" ]; then
+            python matcha_alert.py --commands
+          elif [ "${{ inputs.summary }}" = "true" ]; then
             python matcha_alert.py --summary
           else
             python matcha_alert.py
