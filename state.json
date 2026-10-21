@@ -466,7 +466,7 @@
       "currency": "USD",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 38.0,
+      "price": 39.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
@@ -661,6 +661,18 @@
       "price": 36.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shinobu-no-shiro-40g-matcha",
+      "variant": "",
+      "watched": false
+    },
+    "https://matchamiyako.com/products/tsubokiri-40-gr-matcha-teapor#41245457645661": {
+      "available": false,
+      "brand": "Marukyu Koyamaen",
+      "currency": "USD",
+      "name": "Tsubokiri matcha powder - limited product!",
+      "official": false,
+      "price": 63.0,
+      "site": "Matcha Miyako (Kyoto)",
+      "url": "https://matchamiyako.com/products/tsubokiri-40-gr-matcha-teapor",
       "variant": "",
       "watched": false
     },
@@ -1569,5 +1581,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-21T02:08:50+00:00"
+  "updated_at": "2026-10-21T03:08:53+00:00"
 }
