@@ -785,7 +785,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1121020c1#1121020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Choan",
@@ -797,7 +797,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1121020c1#1121040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Choan",
@@ -1049,7 +1049,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1061,7 +1061,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1073,7 +1073,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1085,7 +1085,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "name": "Chigi no Shiro",
@@ -1321,20 +1321,6 @@
         "pack": "bag"
       },
       {
-        "core": "choan",
-        "grams": 20,
-        "jpy": 7150,
-        "label": "Choan 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "choan",
-        "grams": 40,
-        "jpy": 13820,
-        "label": "Choan 40g can",
-        "pack": "can"
-      },
-      {
         "core": "eiju",
         "grams": 20,
         "jpy": 4700,
@@ -1412,34 +1398,6 @@
         "pack": "can"
       },
       {
-        "core": "chiginoshiro",
-        "grams": 40,
-        "jpy": 2920,
-        "label": "Chigi no Shiro 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6650,
-        "label": "Chigi no Shiro 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6340,
-        "label": "Chigi no Shiro 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 200,
-        "jpy": 12700,
-        "label": "Chigi no Shiro 200g can",
-        "pack": "can"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1500,6 +1458,48 @@
         "grams": 40,
         "jpy": 40120,
         "label": "Tenju 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "choan",
+        "grams": 20,
+        "jpy": 7150,
+        "label": "Choan 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "choan",
+        "grams": 40,
+        "jpy": 13820,
+        "label": "Choan 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 40,
+        "jpy": 2920,
+        "label": "Chigi no Shiro 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6650,
+        "label": "Chigi no Shiro 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6340,
+        "label": "Chigi no Shiro 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 200,
+        "jpy": 12700,
+        "label": "Chigi no Shiro 200g can",
         "pack": "can"
       },
       {
@@ -1569,5 +1569,5 @@
     }
   },
   "tg_offset": 741155497,
-  "updated_at": "2026-10-21T04:08:46+00:00"
+  "updated_at": "2026-10-21T06:08:43+00:00"
 }
