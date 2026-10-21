@@ -144,11 +144,18 @@ def item_block(brand, item, listings, rates, site_order, show_sold_out=True):
             by_site.setdefault(it["site"], []).append(it)
     for site in sorted(by_site, key=lambda s: (s_rank.get(s, 99), s)):
         lines.append(f"  🏪 {html.escape(site)}")
-        for it in sorted(by_site[site], key=lambda x: (parse_size(x["name"], x.get("variant", ""))[0] or 0, x["name"])):
-            note = price_note(it, rates)
-            lines.append(f"    {'✅' if it['available'] else '❌'} <a href=\"{html.escape(it['url'])}\">"
-                         f"{html.escape(short_label(it))}</a>" + (f" · {html.escape(note)}" if note else ""))
+        lines += ["    " + listing_line(it, rates) for it in sorted(by_site[site], key=listing_order)]
     return lines
+
+
+def listing_order(it):
+    return parse_size(it["name"], it.get("variant", ""))[0] or 0, it["name"]
+
+
+def listing_line(it, rates):
+    note = price_note(it, rates)
+    return (f"{'✅' if it['available'] else '❌'} <a href=\"{html.escape(it['url'])}\">"
+            f"{html.escape(short_label(it))}</a>" + (f" · {html.escape(note)}" if note else ""))
 
 
 def _by_item(items):
@@ -319,6 +326,51 @@ def sync_subscribers(state: dict, allow_private: bool = True, cat: dict | None =
     return joined, list(dict.fromkeys(want_summary))
 
 
+# --------------------------------------------------------------------------
+# Optional Cloudflare Worker (worker/worker.js): answers commands instantly and
+# keeps each chat's picks. Used when WORKER_URL and WORKER_SECRET are set; the
+# scan then gets subscribers from it instead of reading getUpdates itself.
+# --------------------------------------------------------------------------
+
+def worker_api(path: str, body=None):
+    base = os.environ.get("WORKER_URL", "").strip().rstrip("/")
+    req = urllib.request.Request(base + path, data=None if body is None else json.dumps(body).encode(),
+                                 headers={"Authorization": "Bearer " + os.environ.get("WORKER_SECRET", "").strip(),
+                                          "Content-Type": "application/json", "User-Agent": "MatchaAlert/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode())
+
+
+def worker_subscribers(state: dict):
+    """Replace state's subscribers with the Worker's (first time: give it ours)."""
+    try:
+        got = worker_api("/subscribers")
+    except Exception as e:
+        print(f"Worker unavailable ({e}); using saved subscribers", file=sys.stderr)
+        return
+    if not got.get("seeded"):
+        worker_api("/subscribers", {"subscribers": state.get("subscribers", {})})
+        print(f"Gave the Worker {len(state.get('subscribers', {}))} existing subscriber(s)")
+        return
+    state["subscribers"] = got.get("subscribers", {})
+
+
+def worker_snapshot(current: dict, rates, aliases, site_order, brand_order, tz_name):
+    try:
+        from zoneinfo import ZoneInfo
+        at = datetime.now(ZoneInfo(tz_name)).strftime("%d %b %H:%M")
+    except Exception:
+        at = datetime.now(timezone.utc).strftime("%d %b %H:%M UTC")
+    items = [{"brand": it.get("brand") or "Other", "item": it.get("item") or it["name"], "site": it["site"],
+              "available": it["available"], "line": listing_line(it, rates)}
+             for it in sorted(current.values(), key=listing_order)]
+    try:
+        worker_api("/snapshot", {"items": items, "aliases": aliases, "site_order": site_order,
+                                 "brand_order": brand_order, "at": at})
+    except Exception as e:
+        print(f"Couldn't send stock to the Worker ({e})", file=sys.stderr)
+
+
 def follow_of(state: dict, cid: str):
     return state.get("subscribers", {}).get(str(cid), {}).get("follow")
 
@@ -451,7 +503,10 @@ def main(argv=None):
     aliases = prices_cfg.get("aliases", {})
     catalog.assign_items(prev_items.values(), catalog.known_items(cfg, prices_cfg, prev_items.values()), aliases)
     joined, want_summary = [], []
-    if os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() and not args.dry_run:
+    use_worker = bool(os.environ.get("WORKER_URL", "").strip())
+    if use_worker and not args.dry_run:
+        worker_subscribers(state)
+    elif os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() and not args.dry_run:
         joined, want_summary = sync_subscribers(state, notify_cfg.get("allow_private_chats", True),
                                                 catalog.catalog(prev_items.values()))
         if notify_cfg.get("group_subscriptions", True) is False:
@@ -519,6 +574,9 @@ def main(argv=None):
         if args.summary:
             print("\n" + build_user_summary(current, errors, None, rates, site_order, brand_order))
         return 0
+
+    if use_worker and not args.only:
+        worker_snapshot(current, rates, aliases, site_order, brand_order, notify_cfg.get("timezone", "Asia/Singapore"))
 
     first_run = not prev_items
     show_sold_out = notify_cfg.get("summary_show_sold_out", True)
