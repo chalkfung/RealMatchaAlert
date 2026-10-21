@@ -34,6 +34,8 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          WORKER_URL: ${{ secrets.WORKER_URL }}         # optional, see worker/SETUP.md
+          WORKER_SECRET: ${{ secrets.WORKER_SECRET }}
         run: |
           if [ "${{ inputs.commands_only }}" = "true" ]; then
             python matcha_alert.py --commands
