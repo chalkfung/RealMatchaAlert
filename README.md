@@ -6,12 +6,18 @@ Checks matcha stock on online stores every hour and messages you on Telegram whe
 - 🔴 **Sold out**: an item just sold out
 - 🆕 **New listing**: a new product appeared in a watched collection
 
-Messages are grouped by shop, then by brand, and each price is shown next to the manufacturer's own list price in Japan, so you can see the reseller markup at a glance:
+Each person (or group) chooses which brands and items they want alerts for, right in the Telegram chat. When an item changes, the alert lists **every shop** that sells that brand and item, with each size's price and stock, and each price next to the manufacturer's own list price in Japan so you can see the reseller markup at a glance:
 
 ```
-🏪 TeaLife (SG)
-  Marukyu Koyamaen
-  🟢 Back in stock: Kinrin Matcha Powder · 40g Can · S$54.80 (≈¥6,302) · list ¥5,720 · +10%
+Marukyu Koyamaen · Wako
+🟢 Back in stock: TeaLife (SG) · 40g Can
+  🏪 TeaLife (SG)
+    ✅ 20g Can · S$32.10 (≈¥3,690) · list ¥2,400 · +54%
+    ✅ 40g Can · S$54.80 (≈¥6,302) · list ¥4,520 · +39%
+  🏪 Marukyu Koyamaen (official)
+    ❌ 40g can · ¥4,520
+  🏪 Matcha Miyako (Kyoto)
+    ✅ Wako 40g matcha powder · US$40.00 (≈¥6,000) · list ¥4,520 · +33%
 ```
 
 It's a small Python script with no AI in the loop, so each scan costs nothing. It only messages you when something changes (plus one summary on the very first run), so you won't get pinged every hour.
@@ -21,11 +27,12 @@ It's a small Python script with no AI in the loop, so each scan costs nothing. I
 | File | What it is |
 |---|---|
 | `matcha_alert.py` | The scanner. Python 3.9+, standard library only, nothing to install. |
+| `catalog.py` | Groups the same brand + item across shops, and handles each chat's `/subscribe` choices. |
 | `adapters.py` | How each shop is read (Shopify, BigCommerce, Marukyu's shop, Sazen Tea). |
 | `pricing.py` | Brand detection, size matching, list-price comparison, exchange rates. |
 | `list_prices.json` | Manufacturer list prices (Yamamasa). Marukyu's are read live from its official shop. |
-| `config.json` | The stores and products to watch. Edit this to add more. |
-| `state.json` | Created automatically. Remembers the last stock status and which chats are subscribed (by ID only, no names). |
+| `config.json` | The stores and products to watch, plus the item `catalog`. Edit this to add more. |
+| `state.json` | Created automatically. Remembers the last stock status, which chats are subscribed and what each one follows (by ID only, no names). |
 | `.github/workflows/scan.yml` | Runs the scan every hour on GitHub for free. |
 | `run_local.sh` | Optional: run it from your own computer with cron instead. |
 
@@ -47,7 +54,8 @@ There are two ways, and you can use both.
 **Groups and people subscribe themselves (no chat ID needed).** Any Telegram group that adds the bot is subscribed automatically, and so is anyone who opens the bot and sends `/start`. Within an hour (at the next scan) the group gets a welcome message with the current stock list, then an alert whenever stock changes.
 - To add the bot to a group: open the group → tap its name → **Add members** → search your bot's username → Add.
 - To unsubscribe: remove the bot from the group, or send `/stop`.
-- `/status` in a subscribed chat sends the full stock list at the next scan.
+- `/status` in a subscribed chat sends the full stock list (for what that chat follows) at the next scan.
+- Each chat can pick its own brands and items, see **Personal alerts** below.
 
 **Your own chat, always (optional).** If you want your personal chat to get alerts no matter what, set `TELEGRAM_CHAT_ID` (Step 3). To find it:
 1. Open your bot, press **Start**, and send it `hi`.
@@ -76,6 +84,66 @@ Good to know about GitHub's scheduler:
 - **Public repo recommended.** A full scan of all four shops takes a minute or two, which hourly comes to roughly 750–1,500 of the 2,000 free minutes a month GitHub gives private repos, so a private repo works but is tight. Public repos get unlimited minutes, and your secrets stay hidden either way. (`state.json` only holds stock data and numeric chat IDs, no names.)
 
 To get a full stock list on demand: **Actions → Matcha stock scan → Run workflow**, tick **Send a full stock summary**.
+
+## Personal alerts: choosing brands and items
+
+Every chat starts out getting **all** alerts. Once someone picks a brand or item, that chat only gets alerts for what it picked. In a group, the choice applies to the whole group.
+
+| Command | What it does |
+|---|---|
+| `/help` | Lists the commands |
+| `/brands` | The brands being watched, each with a tap-to-subscribe link |
+| `/items` | Every item (matcha grade), whether it's in stock somewhere, and in how many shops. Each has a link like `/sub_marukyu_wako`: tap it to subscribe |
+| `/subscribe wako` | Subscribe by name. Also works with a brand (`/subscribe yamamasa`), brand + item (`/subscribe yamamasa seiun`), several at once (`/subscribe wako, isuzu, kinrin`) or `/subscribe all` |
+| `/unsubscribe wako` | Stop one. Works on anything, including one item inside a brand you follow, or one brand while you follow everything |
+| `/list` | What this chat follows, with tap-to-unsubscribe links |
+| `/status` | Full stock list for what this chat follows |
+| `/stop` | Leave completely |
+
+The daily summary is personal too: each chat only sees the brands and items it follows. A chat that unsubscribes from everything gets no messages until it subscribes again.
+
+**Replies aren't instant.** The bot has no server; it reads commands when the next scan starts, so a reply can take up to an hour. To make it about 10 minutes, add the optional second cron job in `CRONJOB_SETUP.md`.
+
+**Show the commands in Telegram's menu (optional, once):** send BotFather `/setcommands`, pick your bot, and paste:
+
+```
+items - Pick items to get alerts for
+brands - Brands being watched
+subscribe - Subscribe, e.g. /subscribe wako
+unsubscribe - Stop alerts for something
+list - What this chat follows
+status - Stock list for what you follow
+help - All commands
+stop - Leave
+```
+
+In a group, if the bot ignores a command, add its username: `/items@your_bot_name`.
+
+### Onboarding a new person
+
+Send them this:
+
+> 1. In Telegram, search for **@your_bot_name** and tap **Start**.
+> 2. Send `/items` and tap the matcha you want (or `/subscribe yamamasa` for a whole brand).
+> 3. Send `/list` to check. Replies can take up to an hour; you'll get a welcome message with the current stock first.
+
+### How items are matched across shops
+
+Shops name the same tea differently ("Wako Ceremonial Grade Uji Matcha Powder", "Wako 40g matcha powder", "Wako" on Marukyu's own shop). The scanner gives each product an item name by looking for, in order:
+
+1. names in `catalog` in `config.json`,
+2. product names in `list_prices.json` (Yamamasa's grades),
+3. product names on Marukyu's official shop (read every scan, so new Marukyu grades appear by themselves).
+
+Anything that doesn't match gets a name cleaned up from the shop's title (e.g. "Latte" from "Matcha Latte powder 200g"). If a shop spells a grade differently, add the spelling to `catalog` so they group together:
+
+```json
+"catalog": {
+  "Marukyu Koyamaen": { "Kokonoe no Mukashi": ["Kokonoe Mukashi"] }
+}
+```
+
+Run `python3 matcha_alert.py --dry-run` to check: each line shows `[shop / brand / item]`.
 
 ## Alternative: run it on your own computer (Mac/Linux)
 

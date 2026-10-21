@@ -3,6 +3,37 @@
     "Marukyu Koyamaen",
     "Yamamasa Koyamaen"
   ],
+  "catalog": {
+    "_readme": "Items (matcha grades) per brand, so the same tea is grouped across shops. Add other spellings a shop uses as a list, e.g. \"Kokonoe no Mukashi\": [\"Kokonoe Mukashi\"]. Marukyu's official shop and list_prices.json add names automatically; anything else gets a name cleaned from the shop's title.",
+    "Marukyu Koyamaen": {
+      "Tenju": [],
+      "Unkaku": [],
+      "Kinrin": [],
+      "Yugen": [],
+      "Wako": [],
+      "Isuzu": [],
+      "Aoarashi": [],
+      "Chigi no Shiro": [],
+      "Choan": [],
+      "Kiwami Choan": [],
+      "Eiju": [],
+      "Awaraku": [],
+      "Tsubokiri": [],
+      "Gabaron": [],
+      "Hoko": [],
+      "Hatsu Enishi": [],
+      "Hatsu no Mori": [],
+      "Kokonoe no Mukashi": [
+        "Kokonoe Mukashi"
+      ],
+      "Shinobu no Mukashi": [],
+      "Shinobu no Shiro": [],
+      "Ume no Shiro": [],
+      "Rindo": [],
+      "Wakatake": []
+    },
+    "Yamamasa Koyamaen": {}
+  },
   "notify": {
     "back_in_stock": true,
     "sold_out": true,

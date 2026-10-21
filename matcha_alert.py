@@ -9,6 +9,7 @@ Usage:
     python matcha_alert.py --summary       # also send a full stock summary
     python matcha_alert.py --test-telegram # send a test message and exit
     python matcha_alert.py --only "TeaLife" --dry-run   # test one shop
+    python matcha_alert.py --commands      # only answer Telegram commands, no scan
 
 Environment variables:
     TELEGRAM_BOT_TOKEN   token from @BotFather
@@ -16,10 +17,11 @@ Environment variables:
                          Groups that add the bot subscribe automatically.
 
 Files:
-    config.json        shops and products to watch
+    config.json        shops and products to watch, item catalog
     list_prices.json   manufacturer list prices (Marukyu is also read live
                        from its official shop each scan)
     state.json         written by the script: last stock seen, subscribers
+                       and what each chat follows (see catalog.py)
 """
 from __future__ import annotations
 
@@ -37,7 +39,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from adapters import ADAPTERS, REQUEST_DELAY  # noqa: E402
-from pricing import build_reference, detect_brand, fx_to_jpy, match_list_price, price_note  # noqa: E402
+import catalog  # noqa: E402
+from pricing import build_reference, detect_brand, fx_to_jpy, match_list_price, price_note, parse_size  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 DEFAULT_CONFIG = HERE / "config.json"
@@ -115,52 +118,79 @@ def diff(prev_state: dict, current: dict, cfg_notify: dict):
 
 
 # --------------------------------------------------------------------------
-# Messages: grouped by shop, then by brand
+# Messages
 # --------------------------------------------------------------------------
 
 LABELS = {"restock": "🟢 Back in stock", "soldout": "🔴 Sold out", "new": "🆕 New", "removed": "⚪ Removed"}
 EVENT_ORDER = {"restock": 0, "new": 1, "soldout": 2, "removed": 3}
 
 
-def item_line(it, rates):
-    name = it["name"] + (f" · {it['variant']}" if it.get("variant") else "")
-    line = f'<a href="{html.escape(it["url"])}">{html.escape(name)}</a>'
-    note = price_note(it, rates)
-    return line + (f" · {html.escape(note)}" if note else "")
+# Personal messages: only what a chat follows, grouped by brand + item, with
+# every shop that sells that item
+# --------------------------------------------------------------------------
+
+def short_label(it):
+    """'40g Can' when the shop has a size option, else the product name."""
+    v = it.get("variant") or ""
+    return v if parse_size(v)[0] else it["name"].split("|")[0].strip() + (f" · {v}" if v else "")
 
 
-def grouped(rows, site_order, brand_order):
-    """rows: [(item, text)] -> lines grouped by site then brand."""
-    by_site = {}
-    for it, text in rows:
-        by_site.setdefault(it["site"], {}).setdefault(it.get("brand") or "Other", []).append(text)
-    lines = []
+def item_block(brand, item, listings, rates, site_order, show_sold_out=True):
     s_rank = {s: i for i, s in enumerate(site_order)}
-    b_rank = {b: i for i, b in enumerate(brand_order)}
+    lines = [f"\n<b>{html.escape(brand)} · {html.escape(item)}</b>"]
+    by_site = {}
+    for it in listings:
+        if it["available"] or show_sold_out:
+            by_site.setdefault(it["site"], []).append(it)
     for site in sorted(by_site, key=lambda s: (s_rank.get(s, 99), s)):
-        lines.append(f"\n🏪 <b>{html.escape(site)}</b>")
-        for brand in sorted(by_site[site], key=lambda b: (b_rank.get(b, 99), b)):
-            lines.append(f"  <i>{html.escape(brand)}</i>")
-            lines.extend(f"  {t}" for t in by_site[site][brand])
+        lines.append(f"  🏪 {html.escape(site)}")
+        for it in sorted(by_site[site], key=lambda x: (parse_size(x["name"], x.get("variant", ""))[0] or 0, x["name"])):
+            note = price_note(it, rates)
+            lines.append(f"    {'✅' if it['available'] else '❌'} <a href=\"{html.escape(it['url'])}\">"
+                         f"{html.escape(short_label(it))}</a>" + (f" · {html.escape(note)}" if note else ""))
     return lines
 
 
-def build_alert(events, rates, site_order, brand_order):
-    rows = [(it, f"{LABELS[k]}: {item_line(it, rates)}")
-            for k, it in sorted(events, key=lambda e: (EVENT_ORDER[e[0]], e[1]["name"]))]
-    return "\n".join(["🍵 <b>Matcha Alert</b>"] + grouped(rows, site_order, brand_order))
+def _by_item(items):
+    groups = {}
+    for it in items:
+        groups.setdefault((it.get("brand") or "Other", it.get("item") or it["name"]), []).append(it)
+    return groups
 
 
-def build_summary(current, errors, rates, site_order, brand_order, show_sold_out=True):
-    rows = []
-    for it in sorted(current.values(), key=lambda x: (not x["available"], x["name"], x.get("variant", ""))):
-        if not it["available"] and not show_sold_out:
-            continue
-        mark = "✅" if it["available"] else "❌"
-        rows.append((it, f"{mark} {'⭐ ' if it['watched'] else ''}{item_line(it, rates)}"))
+def _brand_sorted(keys, brand_order):
+    b_rank = {b: i for i, b in enumerate(brand_order)}
+    return sorted(keys, key=lambda k: (b_rank.get(k[0], 99), k[0], k[1].lower()))
+
+
+def build_user_alert(events, current, follow, rates, site_order, brand_order):
+    """One alert per chat: each changed item, then where it's sold now."""
+    events = [e for e in events if catalog.wants(follow, e[1])]
+    if not events:
+        return None
+    changed = _by_item(it for _, it in events)
+    everywhere = _by_item(current.values())
+    lines = ["🍵 <b>Matcha Alert</b>"]
+    for key in _brand_sorted(changed, brand_order):
+        evs = sorted([e for e in events if (e[1].get("brand") or "Other", e[1].get("item") or e[1]["name"]) == key],
+                     key=lambda e: EVENT_ORDER[e[0]])
+        lines.append(f"\n<b>{html.escape(key[0])} · {html.escape(key[1])}</b>")
+        lines += [f"{LABELS[k]}: {html.escape(it['site'])} · {html.escape(short_label(it))}" for k, it in evs]
+        listings = everywhere.get(key, [])
+        if listings:
+            lines += item_block(*key, listings, rates, site_order)[1:]
+    return "\n".join(lines)
+
+
+def build_user_summary(current, errors, follow, rates, site_order, brand_order, show_sold_out=True):
+    groups = _by_item(it for it in current.values() if catalog.wants(follow, it))
     lines = ["🍵 <b>Matcha Alert: stock summary</b>",
              "<i>list = manufacturer's price in Japan incl. tax; % = shop price vs list</i>"]
-    lines += grouped(rows, site_order, brand_order)
+    if not groups:
+        lines.append("\nYou're not following anything yet. Send /items to pick some.")
+    for key in _brand_sorted(groups, brand_order):
+        if show_sold_out or any(it["available"] for it in groups[key]):
+            lines += item_block(*key, groups[key], rates, site_order, show_sold_out)
     if errors:
         lines.append("\n⚠️ Couldn't read:\n" + "\n".join(html.escape(e) for e in errors))
     return "\n".join(lines)
@@ -175,6 +205,8 @@ def build_summary(current, errors, rates, site_order, brand_order, show_sold_out
 #     The bot picks these up from Telegram's getUpdates at the start of each
 #     scan and remembers them in state.json. Removing the bot from a group,
 #     or sending /stop, unsubscribes.
+#   * each chat can narrow its alerts to brands/items with /subscribe etc.
+#     (catalog.py). Commands are answered when the next scan starts.
 # --------------------------------------------------------------------------
 
 class TelegramError(Exception):
@@ -203,13 +235,14 @@ def _chat_label(chat: dict):
         or chat.get("username") or str(chat.get("id"))
 
 
-def sync_subscribers(state: dict, allow_private: bool = True):
-    """Read new Telegram updates; add/remove subscriber chats.
+def sync_subscribers(state: dict, allow_private: bool = True, cat: dict | None = None):
+    """Read new Telegram updates; add/remove subscriber chats; answer commands.
 
-    Returns the list of chat ids that just joined (they get a welcome + summary).
+    Returns (chats that just joined: they get a welcome + summary,
+             chats that asked for /status: they get a summary).
     """
     subs = state.setdefault("subscribers", {})
-    joined = []
+    joined, want_summary = [], []
     try:
         updates = tg_api("getUpdates", {
             "offset": state.get("tg_offset", 0),
@@ -218,13 +251,14 @@ def sync_subscribers(state: dict, allow_private: bool = True):
         })
     except TelegramError as e:
         print(f"Telegram getUpdates failed ({e}); using saved subscribers", file=sys.stderr)
-        return joined
+        return joined, want_summary
 
     def add(chat):
         cid = str(chat["id"])
         if cid not in subs:
             joined.append(cid)
-        subs[cid] = {"type": chat.get("type", "")}  # no names: state.json may sit in a public repo
+        # no names: state.json may sit in a public repo
+        subs[cid] = {**subs.get(cid, {}), "type": chat.get("type", "")}
         print(f"Subscribed chat {cid} ({_chat_label(chat)})")
 
     def remove(cid):
@@ -249,14 +283,19 @@ def sync_subscribers(state: dict, allow_private: bool = True):
             continue
         chat = msg["chat"]
         if msg.get("migrate_to_chat_id"):  # group upgraded to supergroup: new id
+            kept = subs.get(str(chat["id"]), {})
             remove(chat["id"])
             add({**chat, "id": msg["migrate_to_chat_id"], "type": "supergroup"})
+            if "follow" in kept:
+                subs[str(msg["migrate_to_chat_id"])]["follow"] = kept["follow"]
             if str(msg["migrate_to_chat_id"]) in joined:  # same group, not a new subscriber
                 joined.remove(str(msg["migrate_to_chat_id"]))
             continue
-        text = (msg.get("text") or "").strip().lower()
-        cmd = text.split("@")[0].split(" ")[0]
-        if cmd == "/start" and (chat.get("type") != "private" or allow_private):
+        text = (msg.get("text") or "").strip()
+        first, _, arg = text.partition(" ")
+        cmd = first.split("@")[0].lower()
+        allowed = chat.get("type") != "private" or allow_private
+        if cmd == "/start" and allowed:
             add(chat)
         elif cmd == "/stop":
             remove(chat["id"])
@@ -265,8 +304,23 @@ def sync_subscribers(state: dict, allow_private: bool = True):
             except TelegramError:
                 pass
         elif cmd == "/status" and str(chat["id"]) in subs:
-            joined.append(str(chat["id"]))  # treat as a request for the summary
-    return joined
+            want_summary.append(str(chat["id"]))
+        elif cmd.startswith("/") and allowed:
+            cid = str(chat["id"])
+            sub = subs.get(cid, {"type": chat.get("type", "")})
+            reply = catalog.handle(cmd, arg, sub, cat or {})
+            if reply is None:
+                continue
+            if cmd.startswith(("/sub", "/unsub")) and cid not in subs:
+                add(chat)  # choosing items also subscribes the chat
+            if cid in subs:
+                subs[cid].update(sub)
+            send_telegram(reply, [cid], state)
+    return joined, list(dict.fromkeys(want_summary))
+
+
+def follow_of(state: dict, cid: str):
+    return state.get("subscribers", {}).get(str(cid), {}).get("follow")
 
 
 def all_recipients(state: dict):
@@ -360,7 +414,7 @@ def daily_summary_due(notify_cfg: dict, state: dict):
     return state.get("last_daily_summary") != today, today
 
 
-STATE_FIELDS = ("site", "brand", "name", "variant", "url", "available", "price", "currency", "watched", "official")
+STATE_FIELDS = ("site", "brand", "item", "name", "variant", "url", "available", "price", "currency", "watched", "official")
 
 
 def main(argv=None):
@@ -372,6 +426,7 @@ def main(argv=None):
     ap.add_argument("--summary", action="store_true", help="also send a full stock summary")
     ap.add_argument("--test-telegram", action="store_true", help="send a test message and exit")
     ap.add_argument("--only", help="scan only the shop with this name (for testing; implies --dry-run)")
+    ap.add_argument("--commands", action="store_true", help="only answer Telegram commands, no scan")
     args = ap.parse_args(argv)
     if args.only:
         args.dry_run = True
@@ -392,12 +447,24 @@ def main(argv=None):
     site_order = [s.get("name") for s in cfg.get("sites", [])]
     brand_order = watch_brands or list(brands)
 
-    joined = []
+    # Item names for last scan's stock, so /items etc. can be answered now
+    aliases = prices_cfg.get("aliases", {})
+    catalog.assign_items(prev_items.values(), catalog.known_items(cfg, prices_cfg, prev_items.values()), aliases)
+    joined, want_summary = [], []
     if os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() and not args.dry_run:
-        joined = sync_subscribers(state, allow_private=notify_cfg.get("allow_private_chats", True))
+        joined, want_summary = sync_subscribers(state, notify_cfg.get("allow_private_chats", True),
+                                                catalog.catalog(prev_items.values()))
         if notify_cfg.get("group_subscriptions", True) is False:
             state["subscribers"] = {}
-            joined = []
+            joined, want_summary = [], []
+    if args.commands:
+        if want_summary:  # /status between scans: answer from last scan's stock
+            rates = fx_to_jpy(state)
+            for cid in want_summary:
+                send_telegram(build_user_summary(prev_items, [], follow_of(state, cid), rates, site_order, brand_order,
+                                                 notify_cfg.get("summary_show_sold_out", True)), [cid], state)
+        save_state(state_path, state)
+        return 0
 
     if args.test_telegram:
         ok = send_telegram("🍵 Matcha Alert is connected. You'll get stock alerts here.", all_recipients(state), state)
@@ -429,9 +496,9 @@ def main(argv=None):
             official.setdefault(site.get("official_for", it["brand"]), []).append(it)
     ref = build_reference(prices_cfg, official, state)
     rates = fx_to_jpy(state)
-    aliases = prices_cfg.get("aliases", {})
     for it in current.values():
         it["list_price"] = None if it.get("official") else match_list_price(it, ref, aliases)
+    catalog.assign_items(current.values(), catalog.known_items(cfg, prices_cfg, current.values()), aliases)
 
     events = diff(prev_items, current, notify_cfg) if not args.only else []
     if notify_cfg.get("only_watched_products", False):
@@ -440,36 +507,51 @@ def main(argv=None):
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     print(f"[{now}] {len(current)} items, {len(events)} change(s), {len(errors)} error(s)")
     for it in sorted(current.values(), key=lambda x: (x["site"], x.get("brand") or "", x["name"], x.get("variant", ""))):
-        print(f"  {'IN ' if it['available'] else 'OUT'} {'*' if it['watched'] else ' '} [{it['site']} / {it.get('brand')}] "
+        print(f"  {'IN ' if it['available'] else 'OUT'} {'*' if it['watched'] else ' '} [{it['site']} / {it.get('brand')} / {it.get('item')}] "
               f"{it['name']} {it.get('variant', '')}  {price_note(it, rates)}")
     for e in errors:
         print("  ERROR", e, file=sys.stderr)
 
     if args.dry_run:
         if events:
-            print("\nWould send:\n" + build_alert(events, rates, site_order, brand_order))
+            print("\nWould send (to a chat following everything):\n"
+                  + build_user_alert(events, current, None, rates, site_order, brand_order))
+        if args.summary:
+            print("\n" + build_user_summary(current, errors, None, rates, site_order, brand_order))
         return 0
 
     first_run = not prev_items
-    recipients = all_recipients(state)
-    if events:
-        send_telegram(build_alert(events, rates, site_order, brand_order), [c for c in recipients if c not in joined], state)
-    summary = build_summary(current, errors, rates, site_order, brand_order,
-                            notify_cfg.get("summary_show_sold_out", True))
+    show_sold_out = notify_cfg.get("summary_show_sold_out", True)
+
+    def summary_for(cid):
+        return build_user_summary(current, errors, follow_of(state, cid), rates, site_order, brand_order, show_sold_out)
+
+    for cid in all_recipients(state):
+        if events and cid not in joined:
+            alert = build_user_alert(events, current, follow_of(state, cid), rates, site_order, brand_order)
+            if alert:
+                send_telegram(alert, [cid], state)
     daily_due, today = daily_summary_due(notify_cfg, state)
     if args.summary or daily_due or (first_run and notify_cfg.get("summary_on_first_run", True)):
-        send_telegram(summary, all_recipients(state), state)
+        for cid in all_recipients(state):
+            if follow_of(state, cid) != []:
+                send_telegram(summary_for(cid), [cid], state)
         if today:
             state["last_daily_summary"] = today
-    elif joined:
-        send_telegram("👋 This chat is now subscribed to <b>Matcha Alert</b>. You'll get a message here when "
-                      "stock changes. Remove the bot (or send /stop) to unsubscribe.\n\n" + summary, joined, state)
+    else:
+        for cid in joined:
+            send_telegram("👋 This chat is now subscribed to <b>Matcha Alert</b>. You'll get every alert until you "
+                          "pick brands or items: send /items to choose, /help for all commands.\n\n"
+                          + summary_for(cid), [cid], state)
+        for cid in want_summary:
+            if cid not in joined:
+                send_telegram(summary_for(cid), [cid], state)
 
     # Alert about persistent errors once, not on every scan
     err_sig = "|".join(sorted(e.split(" -> ")[0] for e in errors))
     if errors and err_sig != state.get("error_sig") and notify_cfg.get("errors", True):
         send_telegram("⚠️ <b>Matcha Alert</b> couldn't read:\n" + "\n".join(html.escape(e) for e in errors),
-                      all_recipients(state), state)
+                      [c for c in all_recipients(state) if follow_of(state, c) != []], state)
 
     state.update({
         "updated_at": now if (events or first_run or err_sig != state.get("error_sig")) else state.get("updated_at", now),
