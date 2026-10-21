@@ -491,7 +491,7 @@
       "item": "Aoarashi",
       "name": "Aoarashi 100g matcha powder (bag)",
       "official": false,
-      "price": 39.0,
+      "price": 38.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag",
       "variant": "",
@@ -511,7 +511,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor#40514941911133": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Gabaron",
@@ -550,7 +550,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -1685,5 +1685,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-21T17:08:44+00:00"
+  "updated_at": "2026-10-21T19:08:46+00:00"
 }
