@@ -550,7 +550,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -582,7 +582,7 @@
       "item": "Kinrin",
       "name": "Kinrin 20g matcha powder",
       "official": false,
-      "price": 26.0,
+      "price": 27.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-20g-matcha",
       "variant": "",
@@ -732,7 +732,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -758,7 +758,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako#39947160092765": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wako",
@@ -771,7 +771,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-100g#40019312935005": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wako",
@@ -797,7 +797,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/yugen#39982243446877": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Yugen",
@@ -1685,5 +1685,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-21T19:08:46+00:00"
+  "updated_at": "2026-10-22T07:08:41+00:00"
 }
