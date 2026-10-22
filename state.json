@@ -485,7 +485,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -1685,5 +1685,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-22T18:08:49+00:00"
+  "updated_at": "2026-10-22T19:08:44+00:00"
 }
