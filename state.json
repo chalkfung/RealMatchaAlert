@@ -563,7 +563,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -732,7 +732,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -1685,5 +1685,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-22T14:08:44+00:00"
+  "updated_at": "2026-10-22T15:08:51+00:00"
 }
