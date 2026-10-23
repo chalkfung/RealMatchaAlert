@@ -543,7 +543,7 @@
       "item": "Aoarashi",
       "name": "Aoarashi 40g matcha powder",
       "official": false,
-      "price": 19.0,
+      "price": 18.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-40g",
       "variant": "",
@@ -556,7 +556,7 @@
       "item": "Gabaron",
       "name": "Gabaron 100g matcha powder",
       "official": false,
-      "price": 82.0,
+      "price": 81.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor",
       "variant": "",
@@ -725,7 +725,7 @@
       "item": "Shinobu no Mukashi",
       "name": "Shinobu no Mukashi 40g matcha powder",
       "official": false,
-      "price": 56.0,
+      "price": 55.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shinobu-no-mukashi-40g-matcha",
       "variant": "",
@@ -751,7 +751,7 @@
       "item": "Tsubokiri",
       "name": "Tsubokiri 40g matcha powder (Limited product)",
       "official": false,
-      "price": 64.0,
+      "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/tsubokiri-40-gr-matcha-teapor",
       "variant": "",
@@ -836,7 +836,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/yugen#39982243446877": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Yugen",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-23T09:08:26+00:00"
+  "updated_at": "2026-10-23T11:08:28+00:00"
 }
