@@ -1,5 +1,5 @@
 {
-  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 42.7332,
@@ -1070,7 +1070,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1083,7 +1083,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1096,7 +1096,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1109,7 +1109,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1122,7 +1122,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1518,41 +1518,6 @@
         "pack": "bag"
       },
       {
-        "core": "yugen",
-        "grams": 20,
-        "jpy": 2000,
-        "label": "Yugen 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 40,
-        "jpy": 3720,
-        "label": "Yugen 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8650,
-        "label": "Yugen 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8340,
-        "label": "Yugen 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "yugen",
-        "grams": 200,
-        "jpy": 16700,
-        "label": "Yugen 200g can",
-        "pack": "can"
-      },
-      {
         "core": "chiginoshiro",
         "grams": 40,
         "jpy": 2920,
@@ -1663,6 +1628,41 @@
         "jpy": 13820,
         "label": "Choan 40g can",
         "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 20,
+        "jpy": 2000,
+        "label": "Yugen 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 40,
+        "jpy": 3720,
+        "label": "Yugen 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8650,
+        "label": "Yugen 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8340,
+        "label": "Yugen 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "yugen",
+        "grams": 200,
+        "jpy": 16700,
+        "label": "Yugen 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1685,5 +1685,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-23T04:08:41+00:00"
+  "updated_at": "2026-10-23T05:08:42+00:00"
 }
