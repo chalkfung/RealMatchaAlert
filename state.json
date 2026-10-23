@@ -315,6 +315,32 @@
       "variant": "40g Can",
       "watched": false
     },
+    "https://japanesetea.sg/prd/ogurayama-30g-by-yamamasa-koyamaen/": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "USD",
+      "item": "Ogurayama",
+      "name": "Ogurayama 30g by Yamamasa Koyamaen",
+      "official": false,
+      "price": 42.12,
+      "site": "TeaLife (SG)",
+      "url": "https://japanesetea.sg/prd/ogurayama-30g-by-yamamasa-koyamaen/",
+      "variant": "",
+      "watched": false
+    },
+    "https://japanesetea.sg/prd/samidori-30g-by-yamamasa-koyamaen/": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "USD",
+      "item": "Samidori",
+      "name": "Samidori 30g by Yamamasa Koyamaen",
+      "official": false,
+      "price": 31.16,
+      "site": "TeaLife (SG)",
+      "url": "https://japanesetea.sg/prd/samidori-30g-by-yamamasa-koyamaen/",
+      "variant": "",
+      "watched": false
+    },
     "https://japanesetea.sg/prd/shikibu-no-mukashi-30g-by-yamamasa-koyamaen/": {
       "available": true,
       "brand": "Yamamasa Koyamaen",
@@ -432,6 +458,19 @@
       "variant": "100g Bag",
       "watched": false
     },
+    "https://japanesetea.sg/prd/yomo-no-kaori-30g-by-yamamasa-koyamaen/": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "USD",
+      "item": "Yomo no Kaori",
+      "name": "Yomo-no-Kaori 30g by Yamamasa Koyamaen",
+      "official": false,
+      "price": 36.64,
+      "site": "TeaLife (SG)",
+      "url": "https://japanesetea.sg/prd/yomo-no-kaori-30g-by-yamamasa-koyamaen/",
+      "variant": "",
+      "watched": false
+    },
     "https://japanesetea.sg/prd/yugen-matcha-by-marukyu-koyamaen/#359-204": {
       "available": true,
       "brand": "Marukyu Koyamaen",
@@ -543,7 +582,7 @@
       "item": "Hoko",
       "name": "Hoko 40g matcha powder",
       "official": false,
-      "price": 63.0,
+      "price": 64.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/hoko-40g-matcha",
       "variant": "",
@@ -608,7 +647,7 @@
       "item": "Kokonoe no Mukashi",
       "name": "Kokonoe Mukashi 40g matcha powder",
       "official": false,
-      "price": 63.0,
+      "price": 64.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha",
       "variant": "",
@@ -1187,7 +1226,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1200,7 +1239,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1213,7 +1252,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1226,7 +1265,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1F43100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1469,34 +1508,6 @@
         "pack": "bag"
       },
       {
-        "core": "isuzu",
-        "grams": 40,
-        "jpy": 2520,
-        "label": "Isuzu 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "isuzu",
-        "grams": 100,
-        "jpy": 5650,
-        "label": "Isuzu 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "isuzu",
-        "grams": 100,
-        "jpy": 5340,
-        "label": "Isuzu 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "isuzu",
-        "grams": 200,
-        "jpy": 10700,
-        "label": "Isuzu 200g can",
-        "pack": "can"
-      },
-      {
         "core": "aoarashi",
         "grams": 40,
         "jpy": 2120,
@@ -1663,6 +1674,34 @@
         "jpy": 12700,
         "label": "Chigi no Shiro 200g can",
         "pack": "can"
+      },
+      {
+        "core": "isuzu",
+        "grams": 40,
+        "jpy": 2520,
+        "label": "Isuzu 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "isuzu",
+        "grams": 100,
+        "jpy": 5650,
+        "label": "Isuzu 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "isuzu",
+        "grams": 100,
+        "jpy": 5340,
+        "label": "Isuzu 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "isuzu",
+        "grams": 200,
+        "jpy": 10700,
+        "label": "Isuzu 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1685,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-23T07:08:40+00:00"
+  "updated_at": "2026-10-23T08:08:26+00:00"
 }
