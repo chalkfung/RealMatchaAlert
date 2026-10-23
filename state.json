@@ -1278,7 +1278,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#11A1040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1291,7 +1291,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#11A1100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1304,7 +1304,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#1F23100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1317,7 +1317,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#1F23200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1464,34 +1464,6 @@
         "jpy": 16840,
         "label": "Unkaku 100g bag",
         "pack": "bag"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 40,
-        "jpy": 2120,
-        "label": "Aoarashi 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 100,
-        "jpy": 4650,
-        "label": "Aoarashi 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 100,
-        "jpy": 4340,
-        "label": "Aoarashi 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "aoarashi",
-        "grams": 200,
-        "jpy": 8700,
-        "label": "Aoarashi 200g can",
-        "pack": "can"
       },
       {
         "core": "kiwamichoan",
@@ -1702,6 +1674,34 @@
         "jpy": 10700,
         "label": "Isuzu 200g can",
         "pack": "can"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 40,
+        "jpy": 2120,
+        "label": "Aoarashi 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 100,
+        "jpy": 4650,
+        "label": "Aoarashi 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 100,
+        "jpy": 4340,
+        "label": "Aoarashi 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "aoarashi",
+        "grams": 200,
+        "jpy": 8700,
+        "label": "Aoarashi 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-23T16:08:30+00:00"
+  "updated_at": "2026-10-23T17:08:31+00:00"
 }
