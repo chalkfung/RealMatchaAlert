@@ -1,5 +1,5 @@
 {
-  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 42.7332,
@@ -537,13 +537,13 @@
       "watched": true
     },
     "https://matchamiyako.com/products/aoarashi-40g#40019312377949": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
       "name": "Aoarashi 40g matcha powder",
       "official": false,
-      "price": 18.0,
+      "price": 19.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/aoarashi-40g",
       "variant": "",
@@ -556,7 +556,7 @@
       "item": "Gabaron",
       "name": "Gabaron 100g matcha powder",
       "official": false,
-      "price": 81.0,
+      "price": 82.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor",
       "variant": "",
@@ -725,7 +725,7 @@
       "item": "Shinobu no Mukashi",
       "name": "Shinobu no Mukashi 40g matcha powder",
       "official": false,
-      "price": 55.0,
+      "price": 56.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shinobu-no-mukashi-40g-matcha",
       "variant": "",
@@ -751,7 +751,7 @@
       "item": "Tsubokiri",
       "name": "Tsubokiri 40g matcha powder (Limited product)",
       "official": false,
-      "price": 63.0,
+      "price": 64.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/tsubokiri-40-gr-matcha-teapor",
       "variant": "",
@@ -914,7 +914,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Eiju",
@@ -927,7 +927,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Eiju",
@@ -1466,20 +1466,6 @@
         "pack": "bag"
       },
       {
-        "core": "eiju",
-        "grams": 20,
-        "jpy": 4700,
-        "label": "Eiju 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "eiju",
-        "grams": 40,
-        "jpy": 9120,
-        "label": "Eiju 40g can",
-        "pack": "can"
-      },
-      {
         "core": "kinrin",
         "grams": 20,
         "jpy": 3000,
@@ -1613,6 +1599,20 @@
         "pack": "can"
       },
       {
+        "core": "eiju",
+        "grams": 20,
+        "jpy": 4700,
+        "label": "Eiju 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 40,
+        "jpy": 9120,
+        "label": "Eiju 40g can",
+        "pack": "can"
+      },
+      {
         "core": "yugen",
         "grams": 20,
         "jpy": 2000,
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-23T12:08:23+00:00"
+  "updated_at": "2026-10-23T13:08:35+00:00"
 }
