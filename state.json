@@ -524,7 +524,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -537,7 +537,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/aoarashi-40g#40019312377949": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -589,7 +589,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -602,7 +602,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -810,7 +810,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-100g#40019312935005": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wako",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-23T19:08:34+00:00"
+  "updated_at": "2026-10-24T03:08:26+00:00"
 }
