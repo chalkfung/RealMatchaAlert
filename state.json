@@ -602,7 +602,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/isuzu-40-gr-matcha#43278939521117": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-25T05:08:31+00:00"
+  "updated_at": "2026-10-25T11:08:29+00:00"
 }
