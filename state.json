@@ -582,7 +582,7 @@
       "item": "Hoko",
       "name": "Hoko 40g matcha powder",
       "official": false,
-      "price": 63.0,
+      "price": 64.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/hoko-40g-matcha",
       "variant": "",
@@ -647,7 +647,7 @@
       "item": "Kokonoe no Mukashi",
       "name": "Kokonoe Mukashi 40g matcha powder",
       "official": false,
-      "price": 63.0,
+      "price": 64.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha",
       "variant": "",
@@ -1434,7 +1434,7 @@
       "watched": true
     }
   },
-  "last_daily_summary": "2026-10-25",
+  "last_daily_summary": "2026-10-26",
   "list_prices": {
     "Marukyu Koyamaen": [
       {
