@@ -169,7 +169,7 @@
       "ZWG": 5.902,
       "ZWL": 5.9023
     },
-    "ts": 1792994908
+    "ts": 1793038116
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -816,7 +816,7 @@
       "item": "Wako",
       "name": "Wako 100g matcha powder",
       "official": false,
-      "price": 94.0,
+      "price": 95.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/wako-100g",
       "variant": "",
@@ -940,7 +940,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -953,7 +953,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -966,7 +966,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -979,7 +979,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -1438,48 +1438,6 @@
   "list_prices": {
     "Marukyu Koyamaen": [
       {
-        "core": "unkaku",
-        "grams": 20,
-        "jpy": 3700,
-        "label": "Unkaku 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 40,
-        "jpy": 7120,
-        "label": "Unkaku 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 100,
-        "jpy": 17150,
-        "label": "Unkaku 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "unkaku",
-        "grams": 100,
-        "jpy": 16840,
-        "label": "Unkaku 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "eiju",
-        "grams": 20,
-        "jpy": 4700,
-        "label": "Eiju 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "eiju",
-        "grams": 40,
-        "jpy": 9120,
-        "label": "Eiju 40g can",
-        "pack": "can"
-      },
-      {
         "core": "aoarashi",
         "grams": 40,
         "jpy": 2120,
@@ -1520,6 +1478,34 @@
         "jpy": 24720,
         "label": "Kiwami Choan 40g can",
         "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 20,
+        "jpy": 3700,
+        "label": "Unkaku 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 40,
+        "jpy": 7120,
+        "label": "Unkaku 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 17150,
+        "label": "Unkaku 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "unkaku",
+        "grams": 100,
+        "jpy": 16840,
+        "label": "Unkaku 100g bag",
+        "pack": "bag"
       },
       {
         "core": "wako",
@@ -1582,6 +1568,20 @@
         "grams": 40,
         "jpy": 13820,
         "label": "Choan 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 20,
+        "jpy": 4700,
+        "label": "Eiju 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 40,
+        "jpy": 9120,
+        "label": "Eiju 40g can",
         "pack": "can"
       },
       {
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-26T17:08:33+00:00"
+  "updated_at": "2026-10-26T18:08:36+00:00"
 }
