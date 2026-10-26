@@ -582,7 +582,7 @@
       "item": "Hoko",
       "name": "Hoko 40g matcha powder",
       "official": false,
-      "price": 64.0,
+      "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/hoko-40g-matcha",
       "variant": "",
@@ -647,7 +647,7 @@
       "item": "Kokonoe no Mukashi",
       "name": "Kokonoe Mukashi 40g matcha powder",
       "official": false,
-      "price": 64.0,
+      "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha",
       "variant": "",
@@ -1174,7 +1174,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1187,7 +1187,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1200,7 +1200,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1213,7 +1213,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1592,34 +1592,6 @@
         "pack": "can"
       },
       {
-        "core": "chiginoshiro",
-        "grams": 40,
-        "jpy": 2920,
-        "label": "Chigi no Shiro 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6650,
-        "label": "Chigi no Shiro 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6340,
-        "label": "Chigi no Shiro 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 200,
-        "jpy": 12700,
-        "label": "Chigi no Shiro 200g can",
-        "pack": "can"
-      },
-      {
         "core": "isuzu",
         "grams": 40,
         "jpy": 2520,
@@ -1702,6 +1674,34 @@
         "jpy": 40120,
         "label": "Tenju 40g can",
         "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 40,
+        "jpy": 2920,
+        "label": "Chigi no Shiro 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6650,
+        "label": "Chigi no Shiro 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6340,
+        "label": "Chigi no Shiro 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 200,
+        "jpy": 12700,
+        "label": "Chigi no Shiro 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-26T07:08:28+00:00"
+  "updated_at": "2026-10-26T08:08:31+00:00"
 }
