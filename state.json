@@ -524,7 +524,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -888,7 +888,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1121020c1#1121020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Choan",
@@ -901,7 +901,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1121020c1#1121040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Choan",
@@ -992,7 +992,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1005,7 +1005,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1018,7 +1018,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1031,7 +1031,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1044,7 +1044,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1057,7 +1057,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1070,7 +1070,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1083,7 +1083,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1096,7 +1096,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1466,55 +1466,6 @@
         "pack": "bag"
       },
       {
-        "core": "wako",
-        "grams": 20,
-        "jpy": 2400,
-        "label": "Wako 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "wako",
-        "grams": 40,
-        "jpy": 4520,
-        "label": "Wako 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "wako",
-        "grams": 100,
-        "jpy": 10650,
-        "label": "Wako 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "wako",
-        "grams": 100,
-        "jpy": 10340,
-        "label": "Wako 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "wako",
-        "grams": 200,
-        "jpy": 20700,
-        "label": "Wako 200g can",
-        "pack": "can"
-      },
-      {
-        "core": "choan",
-        "grams": 20,
-        "jpy": 7150,
-        "label": "Choan 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "choan",
-        "grams": 40,
-        "jpy": 13820,
-        "label": "Choan 40g can",
-        "pack": "can"
-      },
-      {
         "core": "eiju",
         "grams": 20,
         "jpy": 4700,
@@ -1527,34 +1478,6 @@
         "jpy": 9120,
         "label": "Eiju 40g can",
         "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 20,
-        "jpy": 3000,
-        "label": "Kinrin 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 40,
-        "jpy": 5720,
-        "label": "Kinrin 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13650,
-        "label": "Kinrin 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13340,
-        "label": "Kinrin 100g bag",
-        "pack": "bag"
       },
       {
         "core": "aoarashi",
@@ -1599,6 +1522,41 @@
         "pack": "can"
       },
       {
+        "core": "wako",
+        "grams": 20,
+        "jpy": 2400,
+        "label": "Wako 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "wako",
+        "grams": 40,
+        "jpy": 4520,
+        "label": "Wako 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "wako",
+        "grams": 100,
+        "jpy": 10650,
+        "label": "Wako 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "wako",
+        "grams": 100,
+        "jpy": 10340,
+        "label": "Wako 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "wako",
+        "grams": 200,
+        "jpy": 20700,
+        "label": "Wako 200g can",
+        "pack": "can"
+      },
+      {
         "core": "tenju",
         "grams": 20,
         "jpy": 20100,
@@ -1611,6 +1569,48 @@
         "jpy": 40120,
         "label": "Tenju 40g can",
         "pack": "can"
+      },
+      {
+        "core": "choan",
+        "grams": 20,
+        "jpy": 7150,
+        "label": "Choan 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "choan",
+        "grams": 40,
+        "jpy": 13820,
+        "label": "Choan 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 20,
+        "jpy": 3000,
+        "label": "Kinrin 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 40,
+        "jpy": 5720,
+        "label": "Kinrin 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13650,
+        "label": "Kinrin 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13340,
+        "label": "Kinrin 100g bag",
+        "pack": "bag"
       },
       {
         "core": "yugen",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-26T14:19:55+00:00"
+  "updated_at": "2026-10-26T16:08:35+00:00"
 }
