@@ -511,7 +511,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/alacsony-koffeintartalmu-matcha-teapor-40g#42893365117021": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Low caffeine",
@@ -550,7 +550,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor#40514941911133": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Gabaron",
@@ -589,7 +589,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -771,7 +771,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-25T22:08:31+00:00"
+  "updated_at": "2026-10-26T04:08:28+00:00"
 }
