@@ -1,5 +1,5 @@
 {
-  "error_sig": "TeaLife (SG): https://japanesetea.sg/matcha/standard/",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 42.8706,
@@ -179,7 +179,7 @@
       "item": "Aoarashi",
       "name": "Aoarashi Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
       "official": false,
-      "price": null,
+      "price": 28.73,
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/",
       "variant": "40g Can",
@@ -192,20 +192,20 @@
       "item": "Aoarashi",
       "name": "Aoarashi Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
       "official": false,
-      "price": null,
+      "price": 51.36,
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/",
       "variant": "100g Bag",
       "watched": false
     },
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-201": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
       "name": "Aoarashi Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
       "official": false,
-      "price": null,
+      "price": 173.14,
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/",
       "variant": "500g Bag",
@@ -270,7 +270,7 @@
       "item": "Isuzu",
       "name": "Isuzu Matcha Powder by Marukyu Koyamaen",
       "official": false,
-      "price": null,
+      "price": 34.97,
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/isuzu-matcha-100g-by-marukyu-koyamaen/",
       "variant": "40g Can",
@@ -387,20 +387,20 @@
       "item": "Wakatake",
       "name": "Wakatake Matcha Powder by Marukyu Koyamaen",
       "official": false,
-      "price": null,
+      "price": 42.78,
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/wakatake-matcha-100g-by-marukyu-koyamaen/",
       "variant": "100g Bag",
       "watched": false
     },
     "https://japanesetea.sg/prd/wakatake-matcha-100g-by-marukyu-koyamaen/#365-219": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
       "name": "Wakatake Matcha Powder by Marukyu Koyamaen",
       "official": false,
-      "price": null,
+      "price": 166.11,
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/wakatake-matcha-100g-by-marukyu-koyamaen/",
       "variant": "500g Bag",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-27T21:09:37+00:00"
+  "updated_at": "2026-10-27T22:08:39+00:00"
 }
