@@ -355,7 +355,7 @@
       "watched": false
     },
     "https://japanesetea.sg/prd/unkaku-matcha-by-marukyu-koyamaen/#364-216": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Unkaku",
@@ -777,7 +777,7 @@
       "item": "Wakatake",
       "name": "Wakatake 200g matcha powder for cooking",
       "official": false,
-      "price": 59.0,
+      "price": 60.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/wakatake-200g-matcha-powder",
       "variant": "",
@@ -842,7 +842,7 @@
       "item": "Yugen",
       "name": "Yugen 100g matcha powder",
       "official": false,
-      "price": 76.0,
+      "price": 77.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/yugen",
       "variant": "",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-27T00:08:31+00:00"
+  "updated_at": "2026-10-27T04:08:26+00:00"
 }
