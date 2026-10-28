@@ -524,7 +524,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -537,7 +537,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/aoarashi-40g#40019312377949": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -589,7 +589,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -784,7 +784,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -914,7 +914,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Eiju",
@@ -927,7 +927,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Eiju",
@@ -992,7 +992,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1005,7 +1005,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1018,7 +1018,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1031,7 +1031,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1438,48 +1438,6 @@
   "list_prices": {
     "Marukyu Koyamaen": [
       {
-        "core": "eiju",
-        "grams": 20,
-        "jpy": 4700,
-        "label": "Eiju 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "eiju",
-        "grams": 40,
-        "jpy": 9120,
-        "label": "Eiju 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 20,
-        "jpy": 3000,
-        "label": "Kinrin 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 40,
-        "jpy": 5720,
-        "label": "Kinrin 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13650,
-        "label": "Kinrin 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13340,
-        "label": "Kinrin 100g bag",
-        "pack": "bag"
-      },
-      {
         "core": "kiwamichoan",
         "grams": 20,
         "jpy": 12600,
@@ -1583,6 +1541,48 @@
         "jpy": 13820,
         "label": "Choan 40g can",
         "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 20,
+        "jpy": 4700,
+        "label": "Eiju 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "eiju",
+        "grams": 40,
+        "jpy": 9120,
+        "label": "Eiju 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 20,
+        "jpy": 3000,
+        "label": "Kinrin 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 40,
+        "jpy": 5720,
+        "label": "Kinrin 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13650,
+        "label": "Kinrin 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13340,
+        "label": "Kinrin 100g bag",
+        "pack": "bag"
       },
       {
         "core": "yugen",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-28T02:08:34+00:00"
+  "updated_at": "2026-10-28T04:08:30+00:00"
 }
