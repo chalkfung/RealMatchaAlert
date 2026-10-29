@@ -169,7 +169,7 @@
       "ZWG": 5.9439,
       "ZWL": 5.944
     },
-    "ts": 1793268515
+    "ts": 1793315309
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -589,7 +589,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -1434,7 +1434,7 @@
       "watched": true
     }
   },
-  "last_daily_summary": "2026-10-29",
+  "last_daily_summary": "2026-10-30",
   "list_prices": {
     "Marukyu Koyamaen": [
       {
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-29T15:08:29+00:00"
+  "updated_at": "2026-10-29T23:08:29+00:00"
 }
