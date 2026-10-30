@@ -1,5 +1,5 @@
 {
-  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 42.9886,
@@ -621,7 +621,7 @@
       "item": "Kinrin",
       "name": "Kinrin 20g matcha powder",
       "official": false,
-      "price": 27.0,
+      "price": 26.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-20g-matcha",
       "variant": "",
@@ -745,7 +745,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/tsubokiri-40-gr-matcha-teapor#41245457645661": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Tsubokiri",
@@ -810,7 +810,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-100g#40019312935005": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wako",
@@ -1391,7 +1391,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html",
-      "variant": "30g",
+      "variant": "",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html": {
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-30T13:08:24+00:00"
+  "updated_at": "2026-10-30T14:08:39+00:00"
 }
