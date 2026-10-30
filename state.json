@@ -524,7 +524,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -1174,7 +1174,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1187,7 +1187,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1200,7 +1200,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1213,7 +1213,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1226,7 +1226,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1239,7 +1239,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1252,7 +1252,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1265,7 +1265,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1F43100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1508,62 +1508,6 @@
         "pack": "bag"
       },
       {
-        "core": "chiginoshiro",
-        "grams": 40,
-        "jpy": 2920,
-        "label": "Chigi no Shiro 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6650,
-        "label": "Chigi no Shiro 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 100,
-        "jpy": 6340,
-        "label": "Chigi no Shiro 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "chiginoshiro",
-        "grams": 200,
-        "jpy": 12700,
-        "label": "Chigi no Shiro 200g can",
-        "pack": "can"
-      },
-      {
-        "core": "isuzu",
-        "grams": 40,
-        "jpy": 2520,
-        "label": "Isuzu 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "isuzu",
-        "grams": 100,
-        "jpy": 5650,
-        "label": "Isuzu 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "isuzu",
-        "grams": 100,
-        "jpy": 5340,
-        "label": "Isuzu 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "isuzu",
-        "grams": 200,
-        "jpy": 10700,
-        "label": "Isuzu 200g can",
-        "pack": "can"
-      },
-      {
         "core": "aoarashi",
         "grams": 40,
         "jpy": 2120,
@@ -1702,6 +1646,62 @@
         "jpy": 16700,
         "label": "Yugen 200g can",
         "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 40,
+        "jpy": 2920,
+        "label": "Chigi no Shiro 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6650,
+        "label": "Chigi no Shiro 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 100,
+        "jpy": 6340,
+        "label": "Chigi no Shiro 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "chiginoshiro",
+        "grams": 200,
+        "jpy": 12700,
+        "label": "Chigi no Shiro 200g can",
+        "pack": "can"
+      },
+      {
+        "core": "isuzu",
+        "grams": 40,
+        "jpy": 2520,
+        "label": "Isuzu 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "isuzu",
+        "grams": 100,
+        "jpy": 5650,
+        "label": "Isuzu 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "isuzu",
+        "grams": 100,
+        "jpy": 5340,
+        "label": "Isuzu 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "isuzu",
+        "grams": 200,
+        "jpy": 10700,
+        "label": "Isuzu 200g can",
+        "pack": "can"
       }
     ]
   },
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-30T03:08:31+00:00"
+  "updated_at": "2026-10-30T05:08:31+00:00"
 }
