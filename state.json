@@ -511,7 +511,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/alacsony-koffeintartalmu-matcha-teapor-40g#42893365117021": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Low caffeine",
@@ -641,7 +641,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha#43810194194525": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Kokonoe no Mukashi",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-30T06:08:25+00:00"
+  "updated_at": "2026-10-30T07:08:30+00:00"
 }
