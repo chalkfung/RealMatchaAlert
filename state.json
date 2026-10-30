@@ -1,5 +1,5 @@
 {
-  "error_sig": "",
+  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
   "fx": {
     "rates": {
       "AED": 42.9886,
@@ -582,7 +582,7 @@
       "item": "Hoko",
       "name": "Hoko 40g matcha powder",
       "official": false,
-      "price": 64.0,
+      "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/hoko-40g-matcha",
       "variant": "",
@@ -647,7 +647,7 @@
       "item": "Kokonoe no Mukashi",
       "name": "Kokonoe Mukashi 40g matcha powder",
       "official": false,
-      "price": 64.0,
+      "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha",
       "variant": "",
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-30T12:08:30+00:00"
+  "updated_at": "2026-10-30T13:08:24+00:00"
 }
