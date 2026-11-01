@@ -524,7 +524,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -589,7 +589,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -771,7 +771,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -1404,7 +1404,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html",
-      "variant": "30g",
+      "variant": "",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html": {
@@ -1724,5 +1724,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-10-31T22:08:30+00:00"
+  "updated_at": "2026-11-01T09:08:27+00:00"
 }
