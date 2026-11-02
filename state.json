@@ -621,7 +621,7 @@
       "item": "Kinrin",
       "name": "Kinrin 40g matcha powder",
       "official": false,
-      "price": 51.0,
+      "price": 50.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
       "variant": "",
@@ -849,7 +849,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1111020c1#1111020C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Tenju",
@@ -862,7 +862,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1111020c1#1111040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Tenju",
@@ -901,7 +901,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131020C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Eiju",
@@ -914,7 +914,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1131020c1#1131040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Eiju",
@@ -927,7 +927,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141020C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -940,7 +940,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -953,7 +953,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -966,7 +966,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1141020c1#1141100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Unkaku",
@@ -979,7 +979,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151020C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -992,7 +992,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1005,7 +1005,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1018,7 +1018,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1031,7 +1031,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161020C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1044,7 +1044,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1057,7 +1057,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1070,7 +1070,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1083,7 +1083,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161200C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1096,7 +1096,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171020C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1109,7 +1109,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1122,7 +1122,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1135,7 +1135,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1148,7 +1148,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171200C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1161,7 +1161,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1174,7 +1174,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1187,7 +1187,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1200,7 +1200,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1181040c1#1181200C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Chigi no Shiro",
@@ -1213,7 +1213,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1226,7 +1226,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1239,7 +1239,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1191200C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1252,7 +1252,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1191040c1#1F43100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Isuzu",
@@ -1265,7 +1265,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#11A1040C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1278,7 +1278,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#11A1100C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1291,7 +1291,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#1F23100C6": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1304,7 +1304,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/11a1040c1#1F23200C1": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Aoarashi",
@@ -1378,7 +1378,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html",
-      "variant": "",
+      "variant": "30g",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html": {
@@ -1391,7 +1391,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html",
-      "variant": "",
+      "variant": "30g",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html": {
@@ -1424,20 +1424,6 @@
   "last_daily_summary": "2026-11-02",
   "list_prices": {
     "Marukyu Koyamaen": [
-      {
-        "core": "kiwamichoan",
-        "grams": 20,
-        "jpy": 12600,
-        "label": "Kiwami Choan 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kiwamichoan",
-        "grams": 40,
-        "jpy": 24720,
-        "label": "Kiwami Choan 40g can",
-        "pack": "can"
-      },
       {
         "core": "unkaku",
         "grams": 20,
@@ -1513,20 +1499,6 @@
         "grams": 40,
         "jpy": 40120,
         "label": "Tenju 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "choan",
-        "grams": 20,
-        "jpy": 7150,
-        "label": "Choan 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "choan",
-        "grams": 40,
-        "jpy": 13820,
-        "label": "Choan 40g can",
         "pack": "can"
       },
       {
@@ -1689,6 +1661,34 @@
         "jpy": 8700,
         "label": "Aoarashi 200g can",
         "pack": "can"
+      },
+      {
+        "core": "kiwamichoan",
+        "grams": 20,
+        "jpy": 12600,
+        "label": "Kiwami Choan 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kiwamichoan",
+        "grams": 40,
+        "jpy": 24720,
+        "label": "Kiwami Choan 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "choan",
+        "grams": 20,
+        "jpy": 7150,
+        "label": "Choan 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "choan",
+        "grams": 40,
+        "jpy": 13820,
+        "label": "Choan 40g can",
+        "pack": "can"
       }
     ]
   },
@@ -1711,5 +1711,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-02T02:08:33+00:00"
+  "updated_at": "2026-11-02T03:08:29+00:00"
 }
