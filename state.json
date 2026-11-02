@@ -576,7 +576,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -621,7 +621,7 @@
       "item": "Kinrin",
       "name": "Kinrin 40g matcha powder",
       "official": false,
-      "price": 50.0,
+      "price": 51.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kinrin-40g-matcha",
       "variant": "",
@@ -1711,5 +1711,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-02T11:08:26+00:00"
+  "updated_at": "2026-11-02T13:08:32+00:00"
 }
