@@ -699,7 +699,7 @@
       "item": "Hatsu Enishi",
       "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
       "official": false,
-      "price": 66.0,
+      "price": 65.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
       "variant": "",
@@ -1096,7 +1096,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1109,7 +1109,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1122,7 +1122,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1135,7 +1135,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1148,7 +1148,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1171020c1#1171200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Yugen",
@@ -1544,41 +1544,6 @@
         "pack": "bag"
       },
       {
-        "core": "yugen",
-        "grams": 20,
-        "jpy": 2000,
-        "label": "Yugen 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 40,
-        "jpy": 3720,
-        "label": "Yugen 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8650,
-        "label": "Yugen 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "yugen",
-        "grams": 100,
-        "jpy": 8340,
-        "label": "Yugen 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "yugen",
-        "grams": 200,
-        "jpy": 16700,
-        "label": "Yugen 200g can",
-        "pack": "can"
-      },
-      {
         "core": "aoarashi",
         "grams": 40,
         "jpy": 2120,
@@ -1632,6 +1597,41 @@
         "grams": 40,
         "jpy": 13820,
         "label": "Choan 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 20,
+        "jpy": 2000,
+        "label": "Yugen 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 40,
+        "jpy": 3720,
+        "label": "Yugen 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8650,
+        "label": "Yugen 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "yugen",
+        "grams": 100,
+        "jpy": 8340,
+        "label": "Yugen 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "yugen",
+        "grams": 200,
+        "jpy": 16700,
+        "label": "Yugen 200g can",
         "pack": "can"
       },
       {
@@ -1705,5 +1705,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-04T10:08:32+00:00"
+  "updated_at": "2026-11-04T11:08:29+00:00"
 }
