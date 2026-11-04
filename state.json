@@ -537,7 +537,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor#40514941911133": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Gabaron",
@@ -550,7 +550,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/gabaron-40gr-matcha-teapor#40514985951325": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Gabaron",
@@ -1705,5 +1705,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-04T21:08:28+00:00"
+  "updated_at": "2026-11-04T22:08:30+00:00"
 }
