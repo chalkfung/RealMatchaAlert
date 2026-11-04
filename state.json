@@ -511,7 +511,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -1317,7 +1317,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1g36020c1#1G36020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kiwami Choan",
@@ -1330,7 +1330,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1g36020c1#1G36040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kiwami Choan",
@@ -1424,20 +1424,6 @@
   "last_daily_summary": "2026-11-04",
   "list_prices": {
     "Marukyu Koyamaen": [
-      {
-        "core": "kiwamichoan",
-        "grams": 20,
-        "jpy": 12600,
-        "label": "Kiwami Choan 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kiwamichoan",
-        "grams": 40,
-        "jpy": 24720,
-        "label": "Kiwami Choan 40g can",
-        "pack": "can"
-      },
       {
         "core": "unkaku",
         "grams": 20,
@@ -1569,6 +1555,20 @@
         "grams": 200,
         "jpy": 8700,
         "label": "Aoarashi 200g can",
+        "pack": "can"
+      },
+      {
+        "core": "kiwamichoan",
+        "grams": 20,
+        "jpy": 12600,
+        "label": "Kiwami Choan 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kiwamichoan",
+        "grams": 40,
+        "jpy": 24720,
+        "label": "Kiwami Choan 40g can",
         "pack": "can"
       },
       {
@@ -1705,5 +1705,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-04T11:08:29+00:00"
+  "updated_at": "2026-11-04T13:08:35+00:00"
 }
