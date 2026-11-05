@@ -537,7 +537,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor#40514941911133": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Gabaron",
@@ -829,7 +829,7 @@
       "item": "Yugen",
       "name": "Yugen 100g matcha powder",
       "official": false,
-      "price": 77.0,
+      "price": 76.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/yugen",
       "variant": "",
@@ -1421,7 +1421,7 @@
       "watched": true
     }
   },
-  "last_daily_summary": "2026-11-05",
+  "last_daily_summary": "2026-11-06",
   "list_prices": {
     "Marukyu Koyamaen": [
       {
@@ -1705,5 +1705,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-05T18:08:31+00:00"
+  "updated_at": "2026-11-05T23:08:30+00:00"
 }
