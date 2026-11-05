@@ -420,7 +420,7 @@
       "watched": false
     },
     "https://japanesetea.sg/prd/wakou-matcha-40g-by-marukyu-koyamaen/#362-212": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wako",
@@ -764,7 +764,7 @@
       "item": "Wakatake",
       "name": "Wakatake 200g matcha powder for cooking",
       "official": false,
-      "price": 59.0,
+      "price": 60.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/wakatake-200g-matcha-powder",
       "variant": "",
@@ -1705,5 +1705,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-05T16:08:34+00:00"
+  "updated_at": "2026-11-05T18:08:31+00:00"
 }
