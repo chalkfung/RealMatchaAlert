@@ -992,7 +992,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1005,7 +1005,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1018,7 +1018,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1031,7 +1031,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1044,7 +1044,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1161020c1#1161200C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Wako",
@@ -1414,38 +1414,17 @@
         "pack": "bag"
       },
       {
-        "core": "wako",
+        "core": "tenju",
         "grams": 20,
-        "jpy": 2400,
-        "label": "Wako 20g can",
+        "jpy": 20100,
+        "label": "Tenju 20g can",
         "pack": "can"
       },
       {
-        "core": "wako",
+        "core": "tenju",
         "grams": 40,
-        "jpy": 4520,
-        "label": "Wako 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "wako",
-        "grams": 100,
-        "jpy": 10650,
-        "label": "Wako 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "wako",
-        "grams": 100,
-        "jpy": 10340,
-        "label": "Wako 100g bag",
-        "pack": "bag"
-      },
-      {
-        "core": "wako",
-        "grams": 200,
-        "jpy": 20700,
-        "label": "Wako 200g can",
+        "jpy": 40120,
+        "label": "Tenju 40g can",
         "pack": "can"
       },
       {
@@ -1610,17 +1589,38 @@
         "pack": "can"
       },
       {
-        "core": "tenju",
+        "core": "wako",
         "grams": 20,
-        "jpy": 20100,
-        "label": "Tenju 20g can",
+        "jpy": 2400,
+        "label": "Wako 20g can",
         "pack": "can"
       },
       {
-        "core": "tenju",
+        "core": "wako",
         "grams": 40,
-        "jpy": 40120,
-        "label": "Tenju 40g can",
+        "jpy": 4520,
+        "label": "Wako 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "wako",
+        "grams": 100,
+        "jpy": 10650,
+        "label": "Wako 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "wako",
+        "grams": 100,
+        "jpy": 10340,
+        "label": "Wako 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "wako",
+        "grams": 200,
+        "jpy": 20700,
+        "label": "Wako 200g can",
         "pack": "can"
       },
       {
@@ -1666,5 +1666,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-06T07:08:24+00:00"
+  "updated_at": "2026-11-06T08:08:22+00:00"
 }
