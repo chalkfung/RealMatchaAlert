@@ -660,7 +660,7 @@
       "item": "Hatsu Enishi",
       "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
       "official": false,
-      "price": 65.0,
+      "price": 66.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
       "variant": "",
@@ -940,7 +940,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151020C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -953,7 +953,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151040C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -966,7 +966,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C1": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -979,7 +979,7 @@
       "watched": false
     },
     "https://www.marukyu-koyamaen.co.jp/english/shop/products/1151020c1#1151100C6": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "JPY",
       "item": "Kinrin",
@@ -1382,7 +1382,7 @@
       "watched": true
     }
   },
-  "last_daily_summary": "2026-11-06",
+  "last_daily_summary": "2026-11-07",
   "list_prices": {
     "Marukyu Koyamaen": [
       {
@@ -1412,34 +1412,6 @@
         "jpy": 13820,
         "label": "Choan 40g can",
         "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 20,
-        "jpy": 3000,
-        "label": "Kinrin 20g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 40,
-        "jpy": 5720,
-        "label": "Kinrin 40g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13650,
-        "label": "Kinrin 100g can",
-        "pack": "can"
-      },
-      {
-        "core": "kinrin",
-        "grams": 100,
-        "jpy": 13340,
-        "label": "Kinrin 100g bag",
-        "pack": "bag"
       },
       {
         "core": "aoarashi",
@@ -1561,6 +1533,34 @@
         "pack": "can"
       },
       {
+        "core": "kinrin",
+        "grams": 20,
+        "jpy": 3000,
+        "label": "Kinrin 20g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 40,
+        "jpy": 5720,
+        "label": "Kinrin 40g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13650,
+        "label": "Kinrin 100g can",
+        "pack": "can"
+      },
+      {
+        "core": "kinrin",
+        "grams": 100,
+        "jpy": 13340,
+        "label": "Kinrin 100g bag",
+        "pack": "bag"
+      },
+      {
         "core": "yugen",
         "grams": 20,
         "jpy": 2000,
@@ -1666,5 +1666,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-06T20:08:27+00:00"
+  "updated_at": "2026-11-06T23:08:29+00:00"
 }
