@@ -1393,6 +1393,578 @@
       "url": "https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
       "variant": "",
       "watched": true
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-chajyunomukashi#42106901069992": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Chajyu no Mukashi",
+      "name": "Chajyu no Mukashi",
+      "official": true,
+      "price": 16200.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-chajyunomukashi?variant=42106901069992",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-chajyunomukashi#42106901102760": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Chajyu no Mukashi",
+      "name": "Chajyu no Mukashi",
+      "official": true,
+      "price": 81000.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-chajyunomukashi?variant=42106901102760",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-chajyunomukashi#42106901135528": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Chajyu no Mukashi",
+      "name": "Chajyu no Mukashi",
+      "official": true,
+      "price": 54000.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-chajyunomukashi?variant=42106901135528",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-kaguraden#42106977222824": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Kaguraden",
+      "name": "Kaguraden",
+      "official": true,
+      "price": 8208.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-kaguraden?variant=42106977222824",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-kaguraden#42106977255592": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Kaguraden",
+      "name": "Kaguraden",
+      "official": true,
+      "price": 40500.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-kaguraden?variant=42106977255592",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-kaguraden#42106977288360": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Kaguraden",
+      "name": "Kaguraden",
+      "official": true,
+      "price": 27000.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-kaguraden?variant=42106977288360",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-kasuganomukashi#42106965885096": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Kasuga no Mukashi",
+      "name": "Kasuga no Mukashi",
+      "official": true,
+      "price": 10800.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-kasuganomukashi?variant=42106965885096",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-kasuganomukashi#42106965917864": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Kasuga no Mukashi",
+      "name": "Kasuga no Mukashi",
+      "official": true,
+      "price": 53460.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-kasuganomukashi?variant=42106965917864",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-kasuganomukashi#42106965950632": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Kasuga no Mukashi",
+      "name": "Kasuga no Mukashi",
+      "official": true,
+      "price": 35640.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-kasuganomukashi?variant=42106965950632",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-makinoshiro#42107074642088": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Maki no Shiro",
+      "name": "Maki no Shiro",
+      "official": true,
+      "price": 5346.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-makinoshiro?variant=42107074642088",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-makinoshiro#42107074674856": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Maki no Shiro",
+      "name": "Maki no Shiro",
+      "official": true,
+      "price": 10260.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-makinoshiro?variant=42107074674856",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-makinoshiro#42107074707624": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Maki no Shiro",
+      "name": "Maki no Shiro",
+      "official": true,
+      "price": 3402.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-makinoshiro?variant=42107074707624",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-matsukaze#42107073560744": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Matsukaze",
+      "name": "Matsukaze",
+      "official": true,
+      "price": 1404.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-matsukaze?variant=42107073560744",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-matsukaze#42107073593512": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Matsukaze",
+      "name": "Matsukaze",
+      "official": true,
+      "price": 6372.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-matsukaze?variant=42107073593512",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-matsukaze#42107073626280": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Matsukaze",
+      "name": "Matsukaze",
+      "official": true,
+      "price": 12312.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-matsukaze?variant=42107073626280",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-matsukaze#42107073659048": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Matsukaze",
+      "name": "Matsukaze",
+      "official": true,
+      "price": 4158.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-matsukaze?variant=42107073659048",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-ogurayama#42106995376296": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Ogurayama",
+      "name": "Ogurayama",
+      "official": true,
+      "price": 2808.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-ogurayama?variant=42106995376296",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-ogurayama#42106995409064": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Ogurayama",
+      "name": "Ogurayama",
+      "official": true,
+      "price": 13068.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-ogurayama?variant=42106995409064",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-ogurayama#42106995441832": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Ogurayama",
+      "name": "Ogurayama",
+      "official": true,
+      "price": 25704.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-ogurayama?variant=42106995441832",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-ogurayama#42106995474600": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Ogurayama",
+      "name": "Ogurayama",
+      "official": true,
+      "price": 8640.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-ogurayama?variant=42106995474600",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-samidori#42107067367592": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Samidori",
+      "name": "Samidori",
+      "official": true,
+      "price": 1728.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-samidori?variant=42107067367592",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-samidori#42107067400360": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Samidori",
+      "name": "Samidori",
+      "official": true,
+      "price": 7884.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-samidori?variant=42107067400360",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-samidori#42107067433128": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Samidori",
+      "name": "Samidori",
+      "official": true,
+      "price": 15336.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-samidori?variant=42107067433128",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-samidori#42107067465896": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Samidori",
+      "name": "Samidori",
+      "official": true,
+      "price": 5184.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-samidori?variant=42107067465896",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-seiun#42106979254440": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Seiun",
+      "name": "Seiun",
+      "official": true,
+      "price": 5508.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-seiun?variant=42106979254440",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-seiun#42106979287208": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Seiun",
+      "name": "Seiun",
+      "official": true,
+      "price": 25920.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-seiun?variant=42106979287208",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-seiun#42106979319976": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Seiun",
+      "name": "Seiun",
+      "official": true,
+      "price": 17388.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-seiun?variant=42106979319976",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-seiun#42106985611432": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Seiun",
+      "name": "Seiun",
+      "official": true,
+      "price": 51408.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-seiun?variant=42106985611432",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi#42106990035112": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Senjin no Mukashi",
+      "name": "Senjin no Mukashi",
+      "official": true,
+      "price": 3888.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi?variant=42106990035112",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi#42106990067880": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Senjin no Mukashi",
+      "name": "Senjin no Mukashi",
+      "official": true,
+      "price": 18144.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi?variant=42106990067880",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi#42106990100648": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Senjin no Mukashi",
+      "name": "Senjin no Mukashi",
+      "official": true,
+      "price": 35748.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi?variant=42106990100648",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi#42106990133416": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Senjin no Mukashi",
+      "name": "Senjin no Mukashi",
+      "official": true,
+      "price": 12096.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-senjinnomukashi?variant=42106990133416",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-shikibu#42106992001192": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Shikibu no Mukashi",
+      "name": "Shikibu",
+      "official": true,
+      "price": 3348.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-shikibu?variant=42106992001192",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-shikibu#42106992033960": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Shikibu no Mukashi",
+      "name": "Shikibu",
+      "official": true,
+      "price": 15660.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-shikibu?variant=42106992033960",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-shikibu#42106992066728": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Shikibu no Mukashi",
+      "name": "Shikibu",
+      "official": true,
+      "price": 30672.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-shikibu?variant=42106992066728",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-shikibu#42106992099496": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Shikibu no Mukashi",
+      "name": "Shikibu",
+      "official": true,
+      "price": 10368.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-shikibu?variant=42106992099496",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-tennouzan#42106986332328": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Tennouzan",
+      "name": "Tennouzan",
+      "official": true,
+      "price": 4428.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-tennouzan?variant=42106986332328",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-tennouzan#42106986365096": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Tennouzan",
+      "name": "Tennouzan",
+      "official": true,
+      "price": 20736.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-tennouzan?variant=42106986365096",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-tennouzan#42106986397864": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Tennouzan",
+      "name": "Tennouzan",
+      "official": true,
+      "price": 41040.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-tennouzan?variant=42106986397864",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-tennouzan#42106986430632": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Tennouzan",
+      "name": "Tennouzan",
+      "official": true,
+      "price": 13932.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-tennouzan?variant=42106986430632",
+      "variant": "100g bag",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-yomonokaori#42106998259880": {
+      "available": true,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Yomo no Kaori",
+      "name": "Yomo no Kaori",
+      "official": true,
+      "price": 2268.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-yomonokaori?variant=42106998259880",
+      "variant": "30g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-yomonokaori#42106998292648": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Yomo no Kaori",
+      "name": "Yomo no Kaori",
+      "official": true,
+      "price": 10476.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-yomonokaori?variant=42106998292648",
+      "variant": "150g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-yomonokaori#42106998325416": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Yomo no Kaori",
+      "name": "Yomo no Kaori",
+      "official": true,
+      "price": 20520.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-yomonokaori?variant=42106998325416",
+      "variant": "300g can",
+      "watched": false
+    },
+    "https://yamamasa-koyamaen.com/products/matcha-yomonokaori#42106998358184": {
+      "available": false,
+      "brand": "Yamamasa Koyamaen",
+      "currency": "JPY",
+      "item": "Yomo no Kaori",
+      "name": "Yomo no Kaori",
+      "official": true,
+      "price": 6912.0,
+      "site": "Yamamasa Koyamaen (official)",
+      "url": "https://yamamasa-koyamaen.com/products/matcha-yomonokaori?variant=42106998358184",
+      "variant": "100g bag",
+      "watched": false
     }
   },
   "last_daily_summary": "2026-11-17",
@@ -1663,6 +2235,316 @@
         "jpy": 8700,
         "label": "Aoarashi 200g can",
         "pack": "can"
+      }
+    ],
+    "Yamamasa Koyamaen": [
+      {
+        "core": "ogurayama",
+        "grams": 30,
+        "jpy": 2808,
+        "label": "Ogurayama 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "ogurayama",
+        "grams": 150,
+        "jpy": 13068,
+        "label": "Ogurayama 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "ogurayama",
+        "grams": 300,
+        "jpy": 25704,
+        "label": "Ogurayama 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "ogurayama",
+        "grams": 100,
+        "jpy": 8640,
+        "label": "Ogurayama 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "shikibu",
+        "grams": 30,
+        "jpy": 3348,
+        "label": "Shikibu 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "shikibu",
+        "grams": 150,
+        "jpy": 15660,
+        "label": "Shikibu 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "shikibu",
+        "grams": 300,
+        "jpy": 30672,
+        "label": "Shikibu 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "shikibu",
+        "grams": 100,
+        "jpy": 10368,
+        "label": "Shikibu 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "samidori",
+        "grams": 30,
+        "jpy": 1728,
+        "label": "Samidori 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "samidori",
+        "grams": 150,
+        "jpy": 7884,
+        "label": "Samidori 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "samidori",
+        "grams": 300,
+        "jpy": 15336,
+        "label": "Samidori 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "samidori",
+        "grams": 100,
+        "jpy": 5184,
+        "label": "Samidori 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "matsukaze",
+        "grams": 30,
+        "jpy": 1404,
+        "label": "Matsukaze 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "matsukaze",
+        "grams": 150,
+        "jpy": 6372,
+        "label": "Matsukaze 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "matsukaze",
+        "grams": 300,
+        "jpy": 12312,
+        "label": "Matsukaze 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "matsukaze",
+        "grams": 100,
+        "jpy": 4158,
+        "label": "Matsukaze 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "yomonokaori",
+        "grams": 30,
+        "jpy": 2268,
+        "label": "Yomo no Kaori 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "yomonokaori",
+        "grams": 150,
+        "jpy": 10476,
+        "label": "Yomo no Kaori 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "yomonokaori",
+        "grams": 300,
+        "jpy": 20520,
+        "label": "Yomo no Kaori 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "yomonokaori",
+        "grams": 100,
+        "jpy": 6912,
+        "label": "Yomo no Kaori 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "senjinnomukashi",
+        "grams": 30,
+        "jpy": 3888,
+        "label": "Senjin no Mukashi 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "senjinnomukashi",
+        "grams": 150,
+        "jpy": 18144,
+        "label": "Senjin no Mukashi 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "senjinnomukashi",
+        "grams": 300,
+        "jpy": 35748,
+        "label": "Senjin no Mukashi 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "senjinnomukashi",
+        "grams": 100,
+        "jpy": 12096,
+        "label": "Senjin no Mukashi 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "tennouzan",
+        "grams": 30,
+        "jpy": 4428,
+        "label": "Tennouzan 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "tennouzan",
+        "grams": 150,
+        "jpy": 20736,
+        "label": "Tennouzan 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "tennouzan",
+        "grams": 300,
+        "jpy": 41040,
+        "label": "Tennouzan 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "tennouzan",
+        "grams": 100,
+        "jpy": 13932,
+        "label": "Tennouzan 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "makinoshiro",
+        "grams": 150,
+        "jpy": 5346,
+        "label": "Maki no Shiro 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "makinoshiro",
+        "grams": 300,
+        "jpy": 10260,
+        "label": "Maki no Shiro 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "makinoshiro",
+        "grams": 100,
+        "jpy": 3402,
+        "label": "Maki no Shiro 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "seiun",
+        "grams": 30,
+        "jpy": 5508,
+        "label": "Seiun 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "seiun",
+        "grams": 150,
+        "jpy": 25920,
+        "label": "Seiun 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "seiun",
+        "grams": 300,
+        "jpy": 51408,
+        "label": "Seiun 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "seiun",
+        "grams": 100,
+        "jpy": 17388,
+        "label": "Seiun 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "kaguraden",
+        "grams": 30,
+        "jpy": 8208,
+        "label": "Kaguraden 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "kaguraden",
+        "grams": 150,
+        "jpy": 40500,
+        "label": "Kaguraden 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "kaguraden",
+        "grams": 100,
+        "jpy": 27000,
+        "label": "Kaguraden 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "chajyunomukashi",
+        "grams": 30,
+        "jpy": 16200,
+        "label": "Chajyu no Mukashi 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "chajyunomukashi",
+        "grams": 150,
+        "jpy": 81000,
+        "label": "Chajyu no Mukashi 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "chajyunomukashi",
+        "grams": 100,
+        "jpy": 54000,
+        "label": "Chajyu no Mukashi 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "kasuganomukashi",
+        "grams": 30,
+        "jpy": 10800,
+        "label": "Kasuga no Mukashi 30g can",
+        "pack": "can"
+      },
+      {
+        "core": "kasuganomukashi",
+        "grams": 150,
+        "jpy": 53460,
+        "label": "Kasuga no Mukashi 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "kasuganomukashi",
+        "grams": 100,
+        "jpy": 35640,
+        "label": "Kasuga no Mukashi 100g bag",
+        "pack": "bag"
       }
     ]
   },
