@@ -97,6 +97,22 @@
       ]
     },
     {
+      "name": "Yamamasa Koyamaen (official)",
+      "adapter": "shopify",
+      "currency": "JPY",
+      "brand": "Yamamasa Koyamaen",
+      "official_for": "Yamamasa Koyamaen",
+      "_note": "Japan-only shop (no forwarders), useful as a stock signal. The collection also holds tea-school, seasonal and cooking matcha; include_tags keeps only the Yamamasa signature line (same as the shop's ?pf_mlt_mo_cha=yamamasa filter).",
+      "collections": [
+        "https://yamamasa-koyamaen.com/collections/matcha"
+      ],
+      "include_tags": [
+        "yamamasa"
+      ],
+      "name_from_handle": true,
+      "require_size": true
+    },
+    {
       "name": "Matcha Miyako (Kyoto)",
       "adapter": "shopify",
       "currency": "USD",
