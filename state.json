@@ -1,5 +1,5 @@
 {
-  "error_sig": "Marukyu Koyamaen (official): https://www.marukyu-koyamaen.co.jp/english/shop/products/catalog/matcha/principal",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 43.4499,
@@ -430,19 +430,6 @@
       "site": "TeaLife (SG)",
       "url": "https://japanesetea.sg/prd/wakou-matcha-40g-by-marukyu-koyamaen/",
       "variant": "100g Bag",
-      "watched": false
-    },
-    "https://japanesetea.sg/prd/yugen-matcha-by-marukyu-koyamaen/": {
-      "available": true,
-      "brand": "Marukyu Koyamaen",
-      "currency": "USD",
-      "item": "Yugen",
-      "name": "Yugen Ceremonial Grade Uji Matcha Powder | Marukyu Koyamaen - Kyoto Japan | Shipping from Singapore",
-      "official": false,
-      "price": 49.53,
-      "site": "TeaLife (SG)",
-      "url": "https://japanesetea.sg/prd/yugen-matcha-by-marukyu-koyamaen/",
-      "variant": "",
       "watched": false
     },
     "https://japanesetea.sg/prd/yugen-matcha-by-marukyu-koyamaen/#359-204": {
@@ -2575,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-17T18:09:21+00:00"
+  "updated_at": "2026-11-17T19:08:25+00:00"
 }
