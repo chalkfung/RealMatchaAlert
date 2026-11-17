@@ -28,6 +28,7 @@ It's a small Python script with no AI in the loop, so each scan costs nothing. I
 |---|---|
 | `matcha_alert.py` | The scanner. Python 3.9+, standard library only, nothing to install. |
 | `catalog.py` | Groups the same brand + item across shops, and handles each chat's `/subscribe` choices. |
+| `worker/` | Optional Cloudflare Worker that answers Telegram commands instantly (`SETUP.md` inside). |
 | `adapters.py` | How each shop is read (Shopify, BigCommerce, Marukyu's shop, Sazen Tea). |
 | `pricing.py` | Brand detection, size matching, list-price comparison, exchange rates. |
 | `list_prices.json` | Manufacturer list prices (Yamamasa). Marukyu's are read live from its official shop. |
@@ -102,7 +103,7 @@ Every chat starts out getting **all** alerts. Once someone picks a brand or item
 
 The daily summary is personal too: each chat only sees the brands and items it follows. A chat that unsubscribes from everything gets no messages until it subscribes again.
 
-**Replies aren't instant.** The bot has no server; it reads commands when the next scan starts, so a reply can take up to an hour. To make it about 10 minutes, add the optional second cron job in `CRONJOB_SETUP.md`.
+**Instant replies need the Worker.** On its own the bot has no server: it reads commands when the next scan starts, so a reply can take up to an hour. Set up the free Cloudflare Worker in [`worker/SETUP.md`](worker/SETUP.md) and replies take a second or two.
 
 **Show the commands in Telegram's menu (optional, once):** send BotFather `/setcommands`, pick your bot, and paste:
 
@@ -125,7 +126,7 @@ Send them this:
 
 > 1. In Telegram, search for **@your_bot_name** and tap **Start**.
 > 2. Send `/items` and tap the matcha you want (or `/subscribe yamamasa` for a whole brand).
-> 3. Send `/list` to check. Replies can take up to an hour; you'll get a welcome message with the current stock first.
+> 3. Send `/list` to check. You'll get a welcome message with the current stock first.
 
 ### How items are matched across shops
 
@@ -185,6 +186,7 @@ On Windows, use Task Scheduler to run `python matcha_alert.py` in this folder ev
 | TeaLife (SG) | BigCommerce: the Matcha Wholesale and Standard categories, then each product in them, size by size | Marukyu, Yamamasa | SGD |
 | Sazen Tea (Kyoto) | Each product page listed in `config.json` | Marukyu, Yamamasa | USD (price not always readable, see below) |
 | Marukyu Koyamaen (official) | Principal matcha only (official catalogue) | Marukyu | JPY. These are also the **list prices** used for comparison |
+| Yamamasa Koyamaen (official) | Shopify: the matcha collection, Yamamasa signature line only (tag `yamamasa`, same as the shop's own filter), every size (30g can, 150g can, 300g can, 100g bag...) | Yamamasa | JPY, tax included. Ships within Japan only and doesn't accept forwarders, so treat it as a restock signal |
 | Matcha Miyako (Kyoto) | Shopify: the matcha collection plus your 4 products | Marukyu (sold unbranded) | USD |
 
 Only Marukyu Koyamaen and Yamamasa Koyamaen products are tracked (`watch_brands` in `config.json`). Add a brand name there to track more, or empty the list to track everything.
@@ -224,6 +226,8 @@ Everything lives in `config.json`. After editing, commit the change (on GitHub, 
   "products": ["https://sometea.com/products/ceremonial-matcha-30g"]
 }
 ```
+
+Optional Shopify settings: `"include_tags": ["yamamasa"]` keeps only products with that tag, `"require_size": true` skips options with no weight (gift and starter sets), and `"name_from_handle": true` names products from their link (`matcha-senjinnomukashi` becomes "Senjin no Mukashi") for shops whose titles are in Japanese. Japanese sizes like `30g缶` / `100g袋` are read as "30g can" / "100g bag" automatically.
 
 **A non-Shopify store:** use `"adapter": "html"` and product links only. It reads the stock status that most shops embed for Google, and otherwise looks for words on the page. If it gets it wrong, tell it what words the site uses:
 
