@@ -556,7 +556,7 @@
       "item": "Isuzu",
       "name": "Isuzu 100g matcha powder (bag)",
       "official": false,
-      "price": 46.0,
+      "price": 47.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/isuzu-100-gr-matcha",
       "variant": "",
@@ -634,7 +634,7 @@
       "item": "Latte",
       "name": "Matcha Latte powder 200g",
       "official": false,
-      "price": 23.0,
+      "price": 24.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/matcha-latte",
       "variant": "",
@@ -2407,27 +2407,6 @@
         "pack": "bag"
       },
       {
-        "core": "makinoshiro",
-        "grams": 150,
-        "jpy": 5346,
-        "label": "Maki no Shiro 150g can",
-        "pack": "can"
-      },
-      {
-        "core": "makinoshiro",
-        "grams": 300,
-        "jpy": 10260,
-        "label": "Maki no Shiro 300g can",
-        "pack": "can"
-      },
-      {
-        "core": "makinoshiro",
-        "grams": 100,
-        "jpy": 3402,
-        "label": "Maki no Shiro 100g bag",
-        "pack": "bag"
-      },
-      {
         "core": "tennouzan",
         "grams": 30,
         "jpy": 4428,
@@ -2453,6 +2432,27 @@
         "grams": 100,
         "jpy": 13932,
         "label": "Tennouzan 100g bag",
+        "pack": "bag"
+      },
+      {
+        "core": "makinoshiro",
+        "grams": 150,
+        "jpy": 5346,
+        "label": "Maki no Shiro 150g can",
+        "pack": "can"
+      },
+      {
+        "core": "makinoshiro",
+        "grams": 300,
+        "jpy": 10260,
+        "label": "Maki no Shiro 300g can",
+        "pack": "can"
+      },
+      {
+        "core": "makinoshiro",
+        "grams": 100,
+        "jpy": 3402,
+        "label": "Maki no Shiro 100g bag",
         "pack": "bag"
       },
       {
