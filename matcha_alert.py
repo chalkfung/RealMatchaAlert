@@ -100,10 +100,11 @@ def merge_items(items):
 def diff(prev_state: dict, current: dict, cfg_notify: dict):
     events = []
     first_run = not prev_state
+    known_sites = {o.get("site") for o in prev_state.values()}  # a newly added shop isn't "new" news
     for key, it in current.items():
         old = prev_state.get(key)
         if old is None:
-            if not first_run and cfg_notify.get("new_product", True):
+            if not first_run and it.get("site") in known_sites and cfg_notify.get("new_product", True):
                 events.append(("new", it))
             continue
         if not old["available"] and it["available"] and cfg_notify.get("back_in_stock", True):
