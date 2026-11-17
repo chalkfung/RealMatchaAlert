@@ -10,7 +10,10 @@ Every item is a dict:
     brand_hint text that may name the brand (vendor, "Maker: ..."), may be ""
 
 Adapters:
-    shopify      any Shopify store (Matcha Miyako, MatchaJP)
+    shopify      any Shopify store (Matcha Miyako, Yamamasa official). Site options:
+                 include_tags (product must carry one), name_from_handle
+                 (romaji name from the URL handle, for Japanese titles),
+                 require_size (skip variants with no weight, e.g. gift sets)
     woocommerce  Marukyu Koyamaen official shop (WordPress product pages)
     bigcommerce  BigCommerce stores (TeaLife / japanesetea.sg)
     sazen        Sazen Tea
@@ -109,14 +112,48 @@ def _split(url):
     return f"{p.scheme}://{p.netloc}", p.path.rstrip("/")
 
 
-def _shopify_items(base, product, price_in_cents):
+# Japanese size words, so "30g缶" reads as "30g can"
+JA_SIZE = {"㎏": "kg", "ｋｇ": "kg", "ｇ": "g", "缶": " can", "袋": " bag", "箱": " box"}
+HANDLE_NOISE = {"matcha", "match", "tea", "powder"}
+
+
+def _ja_size(text):
+    for a, b in JA_SIZE.items():
+        text = text.replace(a, b)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _name_from_handle(handle, fallback):
+    """'matcha-senjinnomukashi' -> 'Senjin no Mukashi' (for shops with Japanese titles)."""
+    words = [w for w in handle.split("-") if w.isascii() and w and w.lower() not in HANDLE_NOISE]
+    if not words:
+        return fallback
+    name = " ".join(words)
+    name = re.sub(r"(?<=[a-z])no(mukashi|shiro|kaori|mori|o)\b", r" no \1", name)
+    return " ".join(w if w == "no" else w.capitalize() for w in name.split())
+
+
+def _tags(product):
+    t = product.get("tags") or []
+    return [x.strip().lower() for x in (t.split(",") if isinstance(t, str) else t)]
+
+
+def _shopify_items(base, product, price_in_cents, site=None):
+    site = site or {}
     handle, title = product["handle"], product["title"]
+    need_tags = [t.lower() for t in site.get("include_tags", [])]
+    if need_tags and not set(need_tags) & set(_tags(product)):
+        return []
+    if site.get("name_from_handle"):
+        title = _name_from_handle(handle, title)
     variants = product.get("variants") or []
     out = []
     for v in variants:
-        vt = v.get("title") or ""
+        vt = _ja_size(v.get("title") or "")
         if vt == "Default Title":
             vt = ""
+        if site.get("require_size") and not re.search(r"\d\s*(kg|g)\b", vt.lower()):
+            continue  # sets, sample packs etc. with no weight
         price = _num(v.get("price"))
         if price is not None and price_in_cents:
             price = price / 100
@@ -137,9 +174,9 @@ def shopify_product(url, site):
         raise ValueError("not a Shopify product URL")
     handle = m.group(1)
     try:
-        return _shopify_items(base, get_json(f"{base}/products/{handle}.js"), price_in_cents=True)
+        return _shopify_items(base, get_json(f"{base}/products/{handle}.js"), price_in_cents=True, site=site)
     except Exception:
-        return _shopify_items(base, get_json(f"{base}/products/{handle}.json")["product"], price_in_cents=False)
+        return _shopify_items(base, get_json(f"{base}/products/{handle}.json")["product"], price_in_cents=False, site=site)
 
 
 def shopify_collection(url, site):
@@ -151,7 +188,7 @@ def shopify_collection(url, site):
     for page in range(1, 21):
         products = get_json(f"{base}/collections/{m.group(1)}/products.json?limit=250&page={page}").get("products") or []
         for p in products:
-            out.extend(_shopify_items(base, p, price_in_cents=False))
+            out.extend(_shopify_items(base, p, price_in_cents=False, site=site))
         if len(products) < 250:
             break
         time.sleep(REQUEST_DELAY)
