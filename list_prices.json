@@ -88,7 +88,10 @@
             "100g bag": 9600,
             "500g bag": 46900,
             "1kg bag": 93500
-          }
+          },
+          "aliases": [
+            "Shikibu"
+          ]
         },
         {
           "name": "Ogurayama",
