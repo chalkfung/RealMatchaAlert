@@ -1382,7 +1382,7 @@
       "watched": true
     },
     "https://www.sazentea.com/en/products/p446-matcha-awaraku.html": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Awaraku",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-18T12:08:28+00:00"
+  "updated_at": "2026-11-18T14:08:29+00:00"
 }
