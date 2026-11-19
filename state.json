@@ -169,7 +169,7 @@
       "ZWG": 5.9992,
       "ZWL": 5.9992
     },
-    "ts": 1795068519
+    "ts": 1795115309
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -472,7 +472,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/alacsony-koffeintartalmu-matcha-teapor-40g#42893365117021": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Low caffeine",
@@ -550,7 +550,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/isuzu-100-gr-matcha#43278962589789": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Isuzu",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-19T18:08:35+00:00"
+  "updated_at": "2026-11-19T19:08:29+00:00"
 }
