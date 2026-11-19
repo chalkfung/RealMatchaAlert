@@ -543,7 +543,7 @@
       "item": "Hoko",
       "name": "Hoko 40g matcha powder",
       "official": false,
-      "price": 63.0,
+      "price": 62.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/hoko-40g-matcha",
       "variant": "",
@@ -608,7 +608,7 @@
       "item": "Kokonoe no Mukashi",
       "name": "Kokonoe Mukashi 40g matcha powder",
       "official": false,
-      "price": 63.0,
+      "price": 62.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha",
       "variant": "",
@@ -1378,7 +1378,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html",
-      "variant": "40g",
+      "variant": "",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p446-matcha-awaraku.html": {
