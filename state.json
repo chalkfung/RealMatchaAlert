@@ -797,7 +797,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/yugen#39982243446877": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Yugen",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-19T01:08:35+00:00"
+  "updated_at": "2026-11-19T15:08:28+00:00"
 }
