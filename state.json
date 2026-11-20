@@ -1,5 +1,5 @@
 {
-  "error_sig": "",
+  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
   "fx": {
     "rates": {
       "AED": 43.3934,
@@ -485,7 +485,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/aoarashi-100-g-matcha-bag#42551452827741": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -712,7 +712,7 @@
       "item": "Tsubokiri",
       "name": "Tsubokiri 40g matcha powder (Limited product)",
       "official": false,
-      "price": 62.0,
+      "price": 63.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/tsubokiri-40-gr-matcha-teapor",
       "variant": "",
@@ -732,7 +732,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-200g-matcha-powder#40451984523357": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -777,7 +777,7 @@
       "item": "Wako",
       "name": "Wako 100g matcha powder",
       "official": false,
-      "price": 93.0,
+      "price": 94.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/wako-100g",
       "variant": "",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-19T19:08:29+00:00"
+  "updated_at": "2026-11-20T05:08:23+00:00"
 }
