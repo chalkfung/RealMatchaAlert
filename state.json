@@ -169,7 +169,7 @@
       "ZWG": 6.0124,
       "ZWL": 6.0124
     },
-    "ts": 1795162104
+    "ts": 1795205308
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -517,7 +517,7 @@
       "item": "Gabaron",
       "name": "Gabaron 100g matcha powder",
       "official": false,
-      "price": 80.0,
+      "price": 81.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/gabaron-100gr-matcha-teapor",
       "variant": "",
@@ -660,7 +660,7 @@
       "item": "Rindo",
       "name": "Rindo 100g matcha powder for cooking",
       "official": false,
-      "price": 16.0,
+      "price": 17.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/rindo-matcha-teapor-suteshez-100gr",
       "variant": "",
@@ -673,7 +673,7 @@
       "item": "Hatsu Enishi",
       "name": "Hatsu Enishi 40g Seasonal Premium Matcha (Limited Product)",
       "official": false,
-      "price": 65.0,
+      "price": 66.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/shincha-hatsu-enishi-40-gr-matcha-teapor",
       "variant": "",
@@ -745,7 +745,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -816,7 +816,7 @@
       "item": "Yugen",
       "name": "Yugen 40g matcha powder",
       "official": false,
-      "price": 32.0,
+      "price": 33.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/yugen-40g",
       "variant": "",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-20T19:08:34+00:00"
+  "updated_at": "2026-11-20T20:08:28+00:00"
 }
