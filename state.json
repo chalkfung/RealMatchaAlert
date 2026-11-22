@@ -169,7 +169,7 @@
       "ZWG": 5.9708,
       "ZWL": 5.9708
     },
-    "ts": 1795342109
+    "ts": 1795388911
   },
   "items": {
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-199": {
@@ -660,7 +660,7 @@
       "item": "Rindo",
       "name": "Rindo 100g matcha powder for cooking",
       "official": false,
-      "price": 17.0,
+      "price": 16.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/rindo-matcha-teapor-suteshez-100gr",
       "variant": "",
@@ -797,7 +797,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/yugen#39982243446877": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Yugen",
@@ -1967,7 +1967,7 @@
       "watched": false
     }
   },
-  "last_daily_summary": "2026-11-22",
+  "last_daily_summary": "2026-11-23",
   "list_prices": {
     "Marukyu Koyamaen": [
       {
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-22T15:08:27+00:00"
+  "updated_at": "2026-11-22T23:08:31+00:00"
 }
