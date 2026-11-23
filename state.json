@@ -745,7 +745,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wakatake-matcha-teapor-suteshez-100gr#39982298988637": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wakatake",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-23T15:08:31+00:00"
+  "updated_at": "2026-11-23T21:08:32+00:00"
 }
