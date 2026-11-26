@@ -186,7 +186,7 @@
       "watched": false
     },
     "https://japanesetea.sg/prd/aoarashi-matcha-by-marukyu-koyamaen/#357-200": {
-      "available": true,
+      "available": false,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Aoarashi",
@@ -602,7 +602,7 @@
       "watched": true
     },
     "https://matchamiyako.com/products/kokonoe-mukashi-40g-matcha#43810194194525": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Kokonoe no Mukashi",
@@ -719,7 +719,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/ume-no-shiro-40g-matcha#43809303887965": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Ume no Shiro",
@@ -771,7 +771,7 @@
       "watched": false
     },
     "https://matchamiyako.com/products/wako-100g#40019312935005": {
-      "available": false,
+      "available": true,
       "brand": "Marukyu Koyamaen",
       "currency": "USD",
       "item": "Wako",
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-25T15:08:30+00:00"
+  "updated_at": "2026-11-26T08:08:27+00:00"
 }
