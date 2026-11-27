@@ -1,5 +1,5 @@
 {
-  "error_sig": "Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p151-matcha-tenju.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2425-matcha-awaraku.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2427-matcha-kasuga-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html|Sazen Tea (Kyoto): https://www.sazentea.com/en/products/p446-matcha-awaraku.html",
+  "error_sig": "",
   "fx": {
     "rates": {
       "AED": 43.3689,
@@ -634,7 +634,7 @@
       "item": "Latte",
       "name": "Matcha Latte powder 200g",
       "official": false,
-      "price": 24.0,
+      "price": 23.0,
       "site": "Matcha Miyako (Kyoto)",
       "url": "https://matchamiyako.com/products/matcha-latte",
       "variant": "",
@@ -1365,7 +1365,7 @@
       "price": null,
       "site": "Sazen Tea (Kyoto)",
       "url": "https://www.sazentea.com/en/products/p2428-matcha-chajyu-no-mukashi.html",
-      "variant": "30g",
+      "variant": "",
       "watched": true
     },
     "https://www.sazentea.com/en/products/p350-tsubokiri-matcha.html": {
@@ -2562,5 +2562,5 @@
     }
   },
   "tg_offset": 741155498,
-  "updated_at": "2026-11-27T06:08:19+00:00"
+  "updated_at": "2026-11-27T07:08:30+00:00"
 }
